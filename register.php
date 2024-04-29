@@ -1,48 +1,21 @@
 <!doctype html>
 <html class="no-js" lang="en">
-
-
-<!-- Mirrored from thepixelcurve.com/html/upstudy/upstudy/login-register.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 22 May 2023 08:40:41 GMT -->
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Upstudy - Education & LMS HTML5 Template</title>
-    <meta name="robots" content="noindex, follow" />
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
-
-    <!-- CSS
-	============================================ -->
-
-    <!-- Icon Font CSS -->
-    <link rel="stylesheet" href="assets/css/plugins/all.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/flaticon.css">
-
-    <!-- Plugins CSS -->
-    <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/aos.css">
-    <link rel="stylesheet" href="assets/css/plugins/nice-select.css">
-    <link rel="stylesheet" href="assets/css/plugins/jquery.powertip.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/magnific-popup.css">
-
-    <!-- Main Style CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <?php include_once 'head.php'; ?>
     <style>
         .signup{
             font-size: 16px;
             margin-top: 5px;
             text-align: center;
         }
+        .qizil{
+            color: red;
+        }
     </style>
 </head>
 <body>
 
     <div class="main-wrapper">
-
-
         <!-- Preloader start -->
         <div id="preloader">
             <div class="preloader">
@@ -87,10 +60,10 @@
                                             <p id="helpblock" style="color:red; font-size: 14px; display: none; padding:none;"></p>
                                         </div>
                                         <div class="single-form">
-                                            <input type="email" class="form-control" placeholder="Enter your email " required>
+                                            <input type="email" name="email" class="form-control" placeholder="Enter your email " required>
                                         </div>
                                         <div class="single-form">
-                                            <input type="password" class="form-control" placeholder="Password " id="pas1" required>
+                                            <input type="password" name="parol" class="form-control" placeholder="Password " id="pas1" required>
                                         </div>
                                         <div class="single-form">
                                             <input type="password" class="form-control" placeholder="Confirm Password " id="pas2" required>
@@ -117,15 +90,68 @@
         </div>
         </div>
         
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/sweetalert.min.js"></script>
 
+        <script type="text/javascript">
+            $('#lgn').on("keyup", function(){
+                let l = $(this).val();
+                $.ajax({
+                    url:"login-tek.php",
+                    method:"POST",
+                    data:{
+                        login:l,
+                    },
+                    success:function(data){
+                        let obj = jQuery.parseJSON(data);
+                        // console.log(obj);
+                        if (obj.xatolik != 0){
+                            $('#helpblock').css('display', 'block');
+                            $("#helpblock").html(obj.xabar);
+                        }
+                        else{
+                            $('#helpblock').css('display', 'none');
+                        }
+                        
+                    },
+                    error:function(xhr){
+                        alert("Siz server bilan bog'lana olmadingiz");
+                    }
+                })
+            });
+            $("#regform").submit(function(e){
+                e.preventDefault();
+                let p1 = $('#pas1').val();
+                let p2 = $('#pas2').val();
+                if (p1!=p2){
+                    $('#mesg').html('Parollar mos emas');
+                    $('#pas1').addClass('qizil');
+                    $('#pas2').addClass('qizil');
+                    return 0;
+                }
+                $.ajax({
+                    url:'addcilent.php',
+                    method:"POST",
+                    data:$('#regform').serialize(),
+                    success:function(data){
+                        let obj =jQuery.parseJSON(data);
+                        if (obj.xatolik==0){
+                            swal("Good job!", obj.xabar, "success");
+                        }else{
+                            swal("Xatolik!", obj.xabar, "error");
+                        }
+                    },
+                    error:function(){
+                        alert('Xatolik yuz berdi');
+                    }
+                });
+            })
 
+        </script>
         <!-- Footer Start -->
         <?php include_once 'footer.php' ?>
 
     </div>
-
-    <!-- JS
-    ============================================ -->
     <?php include_once 'script.php'?>
 </body>
 </html>
