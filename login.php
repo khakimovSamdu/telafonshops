@@ -46,15 +46,15 @@
                                 <!-- Section Title End -->
 
                                 <div class="login-register-form">
-                                    <form action="check.php" method="POST" id = 'logform'>
+                                    <form action="isusername.php" method="POST" id = 'logform'>
                                         <div class="single-form">
-                                            <input type="email" class="form-control" placeholder="Your email ">
+                                            <input  type="text" name='username' class="form-control" placeholder="Your username ">
                                         </div>
-                                        <div class="single-form">
-                                            <input type="password" class="form-control" placeholder="Your password" id = 'pass'>
+                                        <div  class="single-form">
+                                            <input type="password" name='password' class="form-control"  placeholder="Your password" id = 'pass'>
                                         </div>
                                         <div class="form-btn">
-                                            <button class="btn">Login</button>
+                                            <button type="submit" class="btn">Login</button>
                                             <div class="signup">
                                                 <span class="signup">Already have an account?
                                                 <a href="register.php">Register</a>
@@ -76,7 +76,32 @@
         </div>
         </div>
         
-
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/sweetalert.min.js"></script>
+        <script type="text/javascript">
+            $('#logform').submit(function(e){
+                e.preventDefault();
+                $.ajax({
+                    url:"isusername.php",
+                    method:"POST",
+                    data:$('#logform').serialize(),
+                    success:function(data){
+                        let obj = jQuery.parseJSON(data);
+                        console.log(obj);
+                        if (obj.xatolik == 0){
+                            swal("Good job!", obj.xabar, "success");
+                        }
+                        else{
+                            $('#pass').val('');
+                            swal("Xatolik!", obj.xabar, "error");
+                        }
+                    },
+                    error:function(){
+                        alert("Internetingizda muammo bor qaytadan urinib ko'ring!")
+                    }
+                });
+            })
+        </script>
 
         <!-- Footer Start -->
         <?php include_once 'footer.php' ?>

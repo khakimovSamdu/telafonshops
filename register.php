@@ -48,19 +48,19 @@
                                 </div>
                                 <!-- Section Title End -->
                                 <div class="login-register-form">
-                                    <form action="adduser.php" method="POST" id = 'regform'>
+                                    <form action="addcilent.php" method="POST" id = 'regform'>
                                         <div class="single-form">
-                                            <input type="text" name="ism" class="form-control" placeholder="Enter your firstname" required>
+                                            <input type="text" name="ism" class="form-control" placeholder="Enter your firstname" id='first' required>
                                         </div>
                                         <div class="single-form">
-                                            <input type="text" name="fam" class="form-control" placeholder="Enter your lastname" required>
+                                            <input type="text" name="fam" class="form-control" placeholder="Enter your lastname" id='last' required>
                                         </div>
                                         <div class="single-form">
                                             <input type="text" name="login" class="form-control" placeholder="Enter your username" id = "lgn" required>
                                             <p id="helpblock" style="color:red; font-size: 14px; display: none; padding:none;"></p>
                                         </div>
                                         <div class="single-form">
-                                            <input type="email" name="email" class="form-control" placeholder="Enter your email " required>
+                                            <input type="email" name="email" class="form-control" placeholder="Enter your email " id='gmail' required>
                                         </div>
                                         <div class="single-form">
                                             <input type="password" name="parol" class="form-control" placeholder="Password " id="pas1" required>
@@ -108,6 +108,11 @@
                         if (obj.xatolik != 0){
                             $('#helpblock').css('display', 'block');
                             $("#helpblock").html(obj.xabar);
+                            $('#first').val('');
+                            $('#last').val('');
+                            $('#lgn').val('');
+                            $('#pas1').val('');
+                            $('#pas2').val('');
                         }
                         else{
                             $('#helpblock').css('display', 'none');
