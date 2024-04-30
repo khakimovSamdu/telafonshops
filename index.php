@@ -7,6 +7,7 @@
         include_once 'head.php' ;
         
     ?>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
 </head>
 
 <body>
@@ -52,12 +53,12 @@
                     <div class="col-lg-6">
                         <!-- Hero Content Start -->
                         <div class="hero-content">
-                            <p class="text" data-aos="fade-up" data-aos-delay="800"><img src="assets/images/energy.png" alt="">Shop from over 20,000+ top phones</p>
-                            <h2 class="title" data-aos="fade-up" data-aos-delay="700">The best site for those who want  to buy a phone</h2>
+                            <p class="text" data-aos="fade-up" data-aos-delay="800"><img src="assets/images/energy.png" alt="">2 000 ++ dan ortiq eng yaxshi telefonlarni xarid qiling</p>
+                            <h1  data-aos="fade-up" data-aos-delay="700">Telefon sotib olmoqchi bo'lganlar uchun eng yaxshi sayt</h1>
                             <div class="hero-btn" data-aos="fade-up" data-aos-delay="900">
-                                <a class="btn" href="login-register.php">Try 7 days Free Trial</a>
+                                <a class="btn" href="login-register.php">Xarid qilish</a>
                             </div>
-                            <p class="link-text" data-aos="fade-up" data-aos-delay="1000"><span>No credit card required.</span> By clicking ‘Start a Free Trial’</p>
+                            <p class="link-text" data-aos="fade-up" data-aos-delay="1000"><span>Kredit karta bilan xarid qilish mumkin</span> Kiridit karta bilan sovda orqali</p>
                         </div>
                         <!-- Hero Content End -->
                     </div>
@@ -88,7 +89,7 @@
                 <div class="category-wrap">
                     <div class="row">
                         <div class="section-title text-center">
-                            <h2 class="title">Top <span>Categories</span></h2>
+                            <h2 class="title">Mavjud <span>Telafonlar</span></h2>
                         </div>
                     </div>
                     <div class="category-content-wrap">
@@ -100,7 +101,7 @@
                                         <img src="assets/images/cat-icon1.png" alt="">
                                     </div>
                                     <div class="category-content">
-                                        <h3 class="title">Mathmetics</h3>
+                                        <h3 class="title">Apple</h3>
                                     </div>
                                 </a>
                                 <!-- Category Item End -->
@@ -112,7 +113,7 @@
                                         <img src="assets/images/cat-icon2.png" alt="">
                                     </div>
                                     <div class="category-content">
-                                        <h3 class="title">Idea Generate</h3>
+                                        <h3 class="title">Huawei</h3>
                                     </div>
                                 </a>
                                 <!-- Category Item End -->
@@ -124,7 +125,7 @@
                                         <img src="assets/images/cat-icon3.png" alt="">
                                     </div>
                                     <div class="category-content">
-                                        <h3 class="title">Chemistry</h3>
+                                        <h3 class="title">Nokia</h3>
                                     </div>
                                 </a>
                                 <!-- Category Item End -->
@@ -136,7 +137,7 @@
                                         <img src="assets/images/cat-icon4.png" alt="">
                                     </div>
                                     <div class="category-content">
-                                        <h3 class="title">Business Analysis</h3>
+                                        <h3 class="title">Oppo</h3>
                                     </div>
                                 </a>
                                 <!-- Category Item End -->
@@ -148,7 +149,7 @@
                                         <img src="assets/images/cat-icon5.png" alt="">
                                     </div>
                                     <div class="category-content">
-                                        <h3 class="title">Development</h3>
+                                        <h3 class="title">Redmi</h3>
                                     </div>
                                 </a>
                                 <!-- Category Item End -->
@@ -160,7 +161,7 @@
                                         <img src="assets/images/cat-icon6.png" alt="">
                                     </div>
                                     <div class="category-content">
-                                        <h3 class="title">Email Marketing</h3>
+                                        <h3 class="title">Samsung</h3>
                                     </div>
                                 </a>
                                 <!-- Category Item End -->
@@ -172,23 +173,12 @@
                                         <img src="assets/images/cat-icon7.png" alt="">
                                     </div>
                                     <div class="category-content">
-                                        <h3 class="title">Arestogoy</h3>
+                                        <h3 class="title">Vivo</h3>
                                     </div>
                                 </a>
                                 <!-- Category Item End -->
                             </div>
-                            <div class="col-xl-3 col-lg-4 col-sm-6">
-                                <!-- Category Item Start -->
-                                <a href="course-grid.php" class="category-item color-3">
-                                    <div class="category-icon">
-                                        <img src="assets/images/cat-icon8.png" alt="">
-                                    </div>
-                                    <div class="category-content">
-                                        <h3 class="title">IT / Technology </h3>
-                                    </div>
-                                </a>
-                                <!-- Category Item End -->
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -214,11 +204,11 @@
                                         $sql = mysqli_query($link, $query);
                                         while ($fetch = mysqli_fetch_assoc($sql)){
                                     ?>
-                                    <div class="col-lg-3 col-sm-6">
+                                    <div class="col-lg-3 col-sm-6" id="t<?=$fetch['id']?>">
                                         <!-- Single Courses Start -->
                                         <div class="single-course">
                                             <div class="courses-image" >
-                                                <a href="course-details.php" ><img style="height: 450px;" src="<?=$fetch['img_url']?>" alt="Courses"></a>
+                                                <a href="" ><img style="height: 350px;" src="<?=$fetch['img_url']?>" alt="Courses"></a>
                                             </div>
                                             <div class="courses-content">
                                                 <div class="top-meta">
@@ -230,9 +220,15 @@
                                                     <span class="sale-price">Narx: <?=$fetch['price']?>$</span>
                                                     </span>
                                                 </div>
-                                                <h4 class="title"><?=$fetch['name']?></h4>
-                                                <h4 class="title">Tezkor xotira: <?=$fetch['RAM']?></h4>
-                                                <h4 class="title">Doimiy xotira: <?=$fetch['memory']?></h4>
+                                                <h5>📱 <?=$fetch['name']?></h5>
+                                                <h5>🎨 <?=$fetch['color']?></h5>
+                                                <h5>💾 <?=$fetch['RAM']?> / <?=$fetch['memory']?></h5>
+                                                <div>
+                                                    <button type="button" class="btn btn-lg btn-warning " style="background-color: #d9a630;"><a style="text-decoration: none;color:white" href="phone-update.php?id=<?=$fetch['id']?>">Update</a></button> 
+                                                    <button type="button" class="btn btn-lg btn-danger " style="background-color: #de221f;" id="<?=$fetch['id']?>" >Delete</button>
+                                                
+                                                </div>
+                                                
                                                 <div class="courses-meta">
                                                     <p class="author-name"><span>By</span> Xakimov Allamurod</p>
                                                     <div class="rating">
@@ -249,240 +245,30 @@
                                     <?php
                                         }
                                     ?>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="tab2">
-
-                                <div class="row">
                                     <div class="col-lg-3 col-sm-6">
                                         <!-- Single Courses Start -->
                                         <div class="single-course">
                                             <div class="courses-image">
-                                                <a href="course-details.php"><img src="assets/images/courses/courses-1.jpg" alt="Courses"></a>
+                                                <a href=""><img style="height: 350px;" src="assets/images/iphone.webp" alt="Courses"></a>
                                             </div>
                                             <div class="courses-content">
                                                 <div class="top-meta">
                                                     <div class="tag-time">
-                                                        <a class="tag" href="#">Beginner</a>
+                                                        <a class="tag" href="#">Company</a>
                                                         <p class="time"><i class="far fa-clock"></i> 2h 30m</p>
                                                     </div>
                                                     <span class="price">
-                                                    <span class="sale-price">Free</span>
+                                                    <span class="sale-price">Price $</span>
                                                     </span>
                                                 </div>
-                                                <h3 class="title"><a href="course-details.php">Getting Started with the Linux Command Line</a></h3>
+                                                <h5>📱 Telafon name</h5>
+                                                <h5>🎨 Telafon rang</h5>
+                                                <h5>💾 RAM / ROM</h5>
+                                                <div>
+                                                    <button style="display: block; width:100%; background-color:#06b823" class='btn btn-primary'><a style="text-decoration: none;color:white" href="phone-insert.php">+ INSERT</a></button>
+                                                </div>
                                                 <div class="courses-meta">
-                                                    <p class="author-name"><span>By</span> Andrew paker</p>
-                                                    <div class="rating">
-                                                        <div class="rating-star">
-                                                            <div class="rating-active" style="width: 60%;"></div>
-                                                        </div>
-                                                        <span>(4.5)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Courses End -->
-                                    </div>
-                                    <div class="col-lg-3 col-sm-6">
-                                        <!-- Single Courses Start -->
-                                        <div class="single-course">
-                                            <div class="courses-image">
-                                                <a href="course-details.php"><img src="assets/images/courses/courses-2.jpg" alt="Courses"></a>
-                                            </div>
-                                            <div class="courses-content">
-                                                <div class="top-meta">
-                                                    <div class="tag-time">
-                                                        <a class="tag" href="#">Beginner</a>
-                                                        <p class="time"><i class="far fa-clock"></i> 2h 30m</p>
-                                                    </div>
-                                                    <span class="price">
-                                                    <span class="sale-price">$49</span>
-                                                    </span>
-                                                </div>
-                                                <h3 class="title"><a href="course-details.php">Learn PHP Programming From Scratch</a></h3>
-                                                <div class="courses-meta">
-                                                    <p class="author-name"><span>By</span> Andrew paker</p>
-                                                    <div class="rating">
-                                                        <div class="rating-star">
-                                                            <div class="rating-active" style="width: 60%;"></div>
-                                                        </div>
-                                                        <span>(4.5)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Courses End -->
-                                    </div>
-                                    <div class="col-lg-3 col-sm-6">
-                                        <!-- Single Courses Start -->
-                                        <div class="single-course">
-                                            <div class="courses-image">
-                                                <a href="course-details.php"><img src="assets/images/courses/courses-3.jpg" alt="Courses"></a>
-                                            </div>
-                                            <div class="courses-content">
-                                                <div class="top-meta">
-                                                    <div class="tag-time">
-                                                        <a class="tag" href="#">Beginner</a>
-                                                        <p class="time"><i class="far fa-clock"></i> 2h 30m</p>
-                                                    </div>
-                                                    <span class="price">
-                                                    <span class="sale-price">$25</span>
-                                                    </span>
-                                                </div>
-                                                <h3 class="title"><a href="course-details.php">Build A Full Web Chat App From Scratch</a></h3>
-                                                <div class="courses-meta">
-                                                    <p class="author-name"><span>By</span> Mike Hussy</p>
-                                                    <div class="rating">
-                                                        <div class="rating-star">
-                                                            <div class="rating-active" style="width: 60%;"></div>
-                                                        </div>
-                                                        <span>(4.5)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Courses End -->
-                                    </div>
-                                    <div class="col-lg-3 col-sm-6">
-                                        <!-- Single Courses Start -->
-                                        <div class="single-course">
-                                            <div class="courses-image">
-                                                <a href="course-details.php"><img src="assets/images/courses/courses-4.jpg" alt="Courses"></a>
-                                            </div>
-                                            <div class="courses-content">
-                                                <div class="top-meta">
-                                                    <div class="tag-time">
-                                                        <a class="tag" href="#">Beginner</a>
-                                                        <p class="time"><i class="far fa-clock"></i> 2h 30m</p>
-                                                    </div>
-                                                    <span class="price">
-                                                    <span class="sale-price">Free</span>
-                                                    </span>
-                                                </div>
-                                                <h3 class="title"><a href="course-details.php">Getting Started with the Linux Command Line</a></h3>
-                                                <div class="courses-meta">
-                                                    <p class="author-name"><span>By</span> Andrew paker</p>
-                                                    <div class="rating">
-                                                        <div class="rating-star">
-                                                            <div class="rating-active" style="width: 60%;"></div>
-                                                        </div>
-                                                        <span>(4.5)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Courses End -->
-                                    </div>
-                                    <div class="col-lg-3 col-sm-6">
-                                        <!-- Single Courses Start -->
-                                        <div class="single-course">
-                                            <div class="courses-image">
-                                                <a href="course-details.php"><img src="assets/images/courses/courses-5.jpg" alt="Courses"></a>
-                                            </div>
-                                            <div class="courses-content">
-                                                <div class="top-meta">
-                                                    <div class="tag-time">
-                                                        <a class="tag" href="#">Beginner</a>
-                                                        <p class="time"><i class="far fa-clock"></i> 2h 30m</p>
-                                                    </div>
-                                                    <span class="price">
-                                                    <span class="sale-price">$59</span>
-                                                    </span>
-                                                </div>
-                                                <h3 class="title"><a href="course-details.php">The Complete JavaScript Course for Beginner</a></h3>
-                                                <div class="courses-meta">
-                                                    <p class="author-name"><span>By</span> Andrew paker</p>
-                                                    <div class="rating">
-                                                        <div class="rating-star">
-                                                            <div class="rating-active" style="width: 60%;"></div>
-                                                        </div>
-                                                        <span>(4.5)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Courses End -->
-                                    </div>
-                                    <div class="col-lg-3 col-sm-6">
-                                        <!-- Single Courses Start -->
-                                        <div class="single-course">
-                                            <div class="courses-image">
-                                                <a href="course-details.php"><img src="assets/images/courses/courses-6.jpg" alt="Courses"></a>
-                                            </div>
-                                            <div class="courses-content">
-                                                <div class="top-meta">
-                                                    <div class="tag-time">
-                                                        <a class="tag" href="#">Beginner</a>
-                                                        <p class="time"><i class="far fa-clock"></i> 2h 30m</p>
-                                                    </div>
-                                                    <span class="price">
-                                                    <span class="sale-price">Free</span>
-                                                    </span>
-                                                </div>
-                                                <h3 class="title"><a href="course-details.php">Getting Started with the Linux Command Line</a></h3>
-                                                <div class="courses-meta">
-                                                    <p class="author-name"><span>By</span> Daziy Millar</p>
-                                                    <div class="rating">
-                                                        <div class="rating-star">
-                                                            <div class="rating-active" style="width: 60%;"></div>
-                                                        </div>
-                                                        <span>(4.5)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Courses End -->
-                                    </div>
-                                    <div class="col-lg-3 col-sm-6">
-                                        <!-- Single Courses Start -->
-                                        <div class="single-course">
-                                            <div class="courses-image">
-                                                <a href="course-details.php"><img src="assets/images/courses/courses-7.jpg" alt="Courses"></a>
-                                            </div>
-                                            <div class="courses-content">
-                                                <div class="top-meta">
-                                                    <div class="tag-time">
-                                                        <a class="tag" href="#">Beginner</a>
-                                                        <p class="time"><i class="far fa-clock"></i> 2h 30m</p>
-                                                    </div>
-                                                    <span class="price">
-                                                    <span class="sale-price">$29</span>
-                                                    </span>
-                                                </div>
-                                                <h3 class="title"><a href="course-details.php">The Complete Web Developer Course</a></h3>
-                                                <div class="courses-meta">
-                                                    <p class="author-name"><span>By</span> Rosy Janner</p>
-                                                    <div class="rating">
-                                                        <div class="rating-star">
-                                                            <div class="rating-active" style="width: 60%;"></div>
-                                                        </div>
-                                                        <span>(4.5)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Courses End -->
-                                    </div>
-                                    <div class="col-lg-3 col-sm-6">
-                                        <!-- Single Courses Start -->
-                                        <div class="single-course">
-                                            <div class="courses-image">
-                                                <a href="course-details.php"><img src="assets/images/courses/courses-8.jpg" alt="Courses"></a>
-                                            </div>
-                                            <div class="courses-content">
-                                                <div class="top-meta">
-                                                    <div class="tag-time">
-                                                        <a class="tag" href="#">Beginner</a>
-                                                        <p class="time"><i class="far fa-clock"></i> 2h 30m</p>
-                                                    </div>
-                                                    <span class="price">
-                                                    <span class="sale-price">Free</span>
-                                                    </span>
-                                                </div>
-                                                <h3 class="title"><a href="course-details.php">Getting Started with the Linux Command Line</a></h3>
-                                                <div class="courses-meta">
-                                                    <p class="author-name"><span>By</span> Andrew paker</p>
+                                                    <p class="author-name"><span>By</span> Xakimov Allamurod</p>
                                                     <div class="rating">
                                                         <div class="rating-star">
                                                             <div class="rating-active" style="width: 60%;"></div>
@@ -495,746 +281,8 @@
                                         <!-- Single Courses End -->
                                     </div>
                                 </div>
-
                             </div>
-                            <div class="tab-pane fade" id="tab3">
-
-                                <div class="row">
-                                    <div class="col-lg-3 col-sm-6">
-                                        <!-- Single Courses Start -->
-                                        <div class="single-course">
-                                            <div class="courses-image">
-                                                <a href="course-details.php"><img src="assets/images/courses/courses-1.jpg" alt="Courses"></a>
-                                            </div>
-                                            <div class="courses-content">
-                                                <div class="top-meta">
-                                                    <div class="tag-time">
-                                                        <a class="tag" href="#">Beginner</a>
-                                                        <p class="time"><i class="far fa-clock"></i> 2h 30m</p>
-                                                    </div>
-                                                    <span class="price">
-                                                    <span class="sale-price">Free</span>
-                                                    </span>
-                                                </div>
-                                                <h3 class="title"><a href="course-details.php">Getting Started with the Linux Command Line</a></h3>
-                                                <div class="courses-meta">
-                                                    <p class="author-name"><span>By</span> Andrew paker</p>
-                                                    <div class="rating">
-                                                        <div class="rating-star">
-                                                            <div class="rating-active" style="width: 60%;"></div>
-                                                        </div>
-                                                        <span>(4.5)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Courses End -->
-                                    </div>
-                                    <div class="col-lg-3 col-sm-6">
-                                        <!-- Single Courses Start -->
-                                        <div class="single-course">
-                                            <div class="courses-image">
-                                                <a href="course-details.php"><img src="assets/images/courses/courses-2.jpg" alt="Courses"></a>
-                                            </div>
-                                            <div class="courses-content">
-                                                <div class="top-meta">
-                                                    <div class="tag-time">
-                                                        <a class="tag" href="#">Beginner</a>
-                                                        <p class="time"><i class="far fa-clock"></i> 2h 30m</p>
-                                                    </div>
-                                                    <span class="price">
-                                                    <span class="sale-price">$49</span>
-                                                    </span>
-                                                </div>
-                                                <h3 class="title"><a href="course-details.php">Learn PHP Programming From Scratch</a></h3>
-                                                <div class="courses-meta">
-                                                    <p class="author-name"><span>By</span> Andrew paker</p>
-                                                    <div class="rating">
-                                                        <div class="rating-star">
-                                                            <div class="rating-active" style="width: 60%;"></div>
-                                                        </div>
-                                                        <span>(4.5)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Courses End -->
-                                    </div>
-                                    <div class="col-lg-3 col-sm-6">
-                                        <!-- Single Courses Start -->
-                                        <div class="single-course">
-                                            <div class="courses-image">
-                                                <a href="course-details.php"><img src="assets/images/courses/courses-3.jpg" alt="Courses"></a>
-                                            </div>
-                                            <div class="courses-content">
-                                                <div class="top-meta">
-                                                    <div class="tag-time">
-                                                        <a class="tag" href="#">Beginner</a>
-                                                        <p class="time"><i class="far fa-clock"></i> 2h 30m</p>
-                                                    </div>
-                                                    <span class="price">
-                                                    <span class="sale-price">$25</span>
-                                                    </span>
-                                                </div>
-                                                <h3 class="title"><a href="course-details.php">Build A Full Web Chat App From Scratch</a></h3>
-                                                <div class="courses-meta">
-                                                    <p class="author-name"><span>By</span> Mike Hussy</p>
-                                                    <div class="rating">
-                                                        <div class="rating-star">
-                                                            <div class="rating-active" style="width: 60%;"></div>
-                                                        </div>
-                                                        <span>(4.5)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Courses End -->
-                                    </div>
-                                    <div class="col-lg-3 col-sm-6">
-                                        <!-- Single Courses Start -->
-                                        <div class="single-course">
-                                            <div class="courses-image">
-                                                <a href="course-details.php"><img src="assets/images/courses/courses-4.jpg" alt="Courses"></a>
-                                            </div>
-                                            <div class="courses-content">
-                                                <div class="top-meta">
-                                                    <div class="tag-time">
-                                                        <a class="tag" href="#">Beginner</a>
-                                                        <p class="time"><i class="far fa-clock"></i> 2h 30m</p>
-                                                    </div>
-                                                    <span class="price">
-                                                    <span class="sale-price">Free</span>
-                                                    </span>
-                                                </div>
-                                                <h3 class="title"><a href="course-details.php">Getting Started with the Linux Command Line</a></h3>
-                                                <div class="courses-meta">
-                                                    <p class="author-name"><span>By</span> Andrew paker</p>
-                                                    <div class="rating">
-                                                        <div class="rating-star">
-                                                            <div class="rating-active" style="width: 60%;"></div>
-                                                        </div>
-                                                        <span>(4.5)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Courses End -->
-                                    </div>
-                                    <div class="col-lg-3 col-sm-6">
-                                        <!-- Single Courses Start -->
-                                        <div class="single-course">
-                                            <div class="courses-image">
-                                                <a href="course-details.php"><img src="assets/images/courses/courses-5.jpg" alt="Courses"></a>
-                                            </div>
-                                            <div class="courses-content">
-                                                <div class="top-meta">
-                                                    <div class="tag-time">
-                                                        <a class="tag" href="#">Beginner</a>
-                                                        <p class="time"><i class="far fa-clock"></i> 2h 30m</p>
-                                                    </div>
-                                                    <span class="price">
-                                                    <span class="sale-price">$59</span>
-                                                    </span>
-                                                </div>
-                                                <h3 class="title"><a href="course-details.php">The Complete JavaScript Course for Beginner</a></h3>
-                                                <div class="courses-meta">
-                                                    <p class="author-name"><span>By</span> Andrew paker</p>
-                                                    <div class="rating">
-                                                        <div class="rating-star">
-                                                            <div class="rating-active" style="width: 60%;"></div>
-                                                        </div>
-                                                        <span>(4.5)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Courses End -->
-                                    </div>
-                                    <div class="col-lg-3 col-sm-6">
-                                        <!-- Single Courses Start -->
-                                        <div class="single-course">
-                                            <div class="courses-image">
-                                                <a href="course-details.php"><img src="assets/images/courses/courses-6.jpg" alt="Courses"></a>
-                                            </div>
-                                            <div class="courses-content">
-                                                <div class="top-meta">
-                                                    <div class="tag-time">
-                                                        <a class="tag" href="#">Beginner</a>
-                                                        <p class="time"><i class="far fa-clock"></i> 2h 30m</p>
-                                                    </div>
-                                                    <span class="price">
-                                                    <span class="sale-price">Free</span>
-                                                    </span>
-                                                </div>
-                                                <h3 class="title"><a href="course-details.php">Getting Started with the Linux Command Line</a></h3>
-                                                <div class="courses-meta">
-                                                    <p class="author-name"><span>By</span> Daziy Millar</p>
-                                                    <div class="rating">
-                                                        <div class="rating-star">
-                                                            <div class="rating-active" style="width: 60%;"></div>
-                                                        </div>
-                                                        <span>(4.5)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Courses End -->
-                                    </div>
-                                    <div class="col-lg-3 col-sm-6">
-                                        <!-- Single Courses Start -->
-                                        <div class="single-course">
-                                            <div class="courses-image">
-                                                <a href="course-details.php"><img src="assets/images/courses/courses-7.jpg" alt="Courses"></a>
-                                            </div>
-                                            <div class="courses-content">
-                                                <div class="top-meta">
-                                                    <div class="tag-time">
-                                                        <a class="tag" href="#">Beginner</a>
-                                                        <p class="time"><i class="far fa-clock"></i> 2h 30m</p>
-                                                    </div>
-                                                    <span class="price">
-                                                    <span class="sale-price">$29</span>
-                                                    </span>
-                                                </div>
-                                                <h3 class="title"><a href="course-details.php">The Complete Web Developer Course</a></h3>
-                                                <div class="courses-meta">
-                                                    <p class="author-name"><span>By</span> Rosy Janner</p>
-                                                    <div class="rating">
-                                                        <div class="rating-star">
-                                                            <div class="rating-active" style="width: 60%;"></div>
-                                                        </div>
-                                                        <span>(4.5)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Courses End -->
-                                    </div>
-                                    <div class="col-lg-3 col-sm-6">
-                                        <!-- Single Courses Start -->
-                                        <div class="single-course">
-                                            <div class="courses-image">
-                                                <a href="course-details.php"><img src="assets/images/courses/courses-8.jpg" alt="Courses"></a>
-                                            </div>
-                                            <div class="courses-content">
-                                                <div class="top-meta">
-                                                    <div class="tag-time">
-                                                        <a class="tag" href="#">Beginner</a>
-                                                        <p class="time"><i class="far fa-clock"></i> 2h 30m</p>
-                                                    </div>
-                                                    <span class="price">
-                                                    <span class="sale-price">Free</span>
-                                                    </span>
-                                                </div>
-                                                <h3 class="title"><a href="course-details.php">Getting Started with the Linux Command Line</a></h3>
-                                                <div class="courses-meta">
-                                                    <p class="author-name"><span>By</span> Andrew paker</p>
-                                                    <div class="rating">
-                                                        <div class="rating-star">
-                                                            <div class="rating-active" style="width: 60%;"></div>
-                                                        </div>
-                                                        <span>(4.5)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Courses End -->
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="tab-pane fade" id="tab4">
-
-                                <div class="row">
-                                    <div class="col-lg-3 col-sm-6">
-                                        <!-- Single Courses Start -->
-                                        <div class="single-course">
-                                            <div class="courses-image">
-                                                <a href="course-details.php"><img src="assets/images/courses/courses-1.jpg" alt="Courses"></a>
-                                            </div>
-                                            <div class="courses-content">
-                                                <div class="top-meta">
-                                                    <div class="tag-time">
-                                                        <a class="tag" href="#">Beginner</a>
-                                                        <p class="time"><i class="far fa-clock"></i> 2h 30m</p>
-                                                    </div>
-                                                    <span class="price">
-                                                    <span class="sale-price">Free</span>
-                                                    </span>
-                                                </div>
-                                                <h3 class="title"><a href="course-details.php">Getting Started with the Linux Command Line</a></h3>
-                                                <div class="courses-meta">
-                                                    <p class="author-name"><span>By</span> Andrew paker</p>
-                                                    <div class="rating">
-                                                        <div class="rating-star">
-                                                            <div class="rating-active" style="width: 60%;"></div>
-                                                        </div>
-                                                        <span>(4.5)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Courses End -->
-                                    </div>
-                                    <div class="col-lg-3 col-sm-6">
-                                        <!-- Single Courses Start -->
-                                        <div class="single-course">
-                                            <div class="courses-image">
-                                                <a href="course-details.php"><img src="assets/images/courses/courses-2.jpg" alt="Courses"></a>
-                                            </div>
-                                            <div class="courses-content">
-                                                <div class="top-meta">
-                                                    <div class="tag-time">
-                                                        <a class="tag" href="#">Beginner</a>
-                                                        <p class="time"><i class="far fa-clock"></i> 2h 30m</p>
-                                                    </div>
-                                                    <span class="price">
-                                                    <span class="sale-price">$49</span>
-                                                    </span>
-                                                </div>
-                                                <h3 class="title"><a href="course-details.php">Learn PHP Programming From Scratch</a></h3>
-                                                <div class="courses-meta">
-                                                    <p class="author-name"><span>By</span> Andrew paker</p>
-                                                    <div class="rating">
-                                                        <div class="rating-star">
-                                                            <div class="rating-active" style="width: 60%;"></div>
-                                                        </div>
-                                                        <span>(4.5)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Courses End -->
-                                    </div>
-                                    <div class="col-lg-3 col-sm-6">
-                                        <!-- Single Courses Start -->
-                                        <div class="single-course">
-                                            <div class="courses-image">
-                                                <a href="course-details.php"><img src="assets/images/courses/courses-3.jpg" alt="Courses"></a>
-                                            </div>
-                                            <div class="courses-content">
-                                                <div class="top-meta">
-                                                    <div class="tag-time">
-                                                        <a class="tag" href="#">Beginner</a>
-                                                        <p class="time"><i class="far fa-clock"></i> 2h 30m</p>
-                                                    </div>
-                                                    <span class="price">
-                                                    <span class="sale-price">$25</span>
-                                                    </span>
-                                                </div>
-                                                <h3 class="title"><a href="course-details.php">Build A Full Web Chat App From Scratch</a></h3>
-                                                <div class="courses-meta">
-                                                    <p class="author-name"><span>By</span> Mike Hussy</p>
-                                                    <div class="rating">
-                                                        <div class="rating-star">
-                                                            <div class="rating-active" style="width: 60%;"></div>
-                                                        </div>
-                                                        <span>(4.5)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Courses End -->
-                                    </div>
-                                    <div class="col-lg-3 col-sm-6">
-                                        <!-- Single Courses Start -->
-                                        <div class="single-course">
-                                            <div class="courses-image">
-                                                <a href="course-details.php"><img src="assets/images/courses/courses-4.jpg" alt="Courses"></a>
-                                            </div>
-                                            <div class="courses-content">
-                                                <div class="top-meta">
-                                                    <div class="tag-time">
-                                                        <a class="tag" href="#">Beginner</a>
-                                                        <p class="time"><i class="far fa-clock"></i> 2h 30m</p>
-                                                    </div>
-                                                    <span class="price">
-                                                    <span class="sale-price">Free</span>
-                                                    </span>
-                                                </div>
-                                                <h3 class="title"><a href="course-details.php">Getting Started with the Linux Command Line</a></h3>
-                                                <div class="courses-meta">
-                                                    <p class="author-name"><span>By</span> Andrew paker</p>
-                                                    <div class="rating">
-                                                        <div class="rating-star">
-                                                            <div class="rating-active" style="width: 60%;"></div>
-                                                        </div>
-                                                        <span>(4.5)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Courses End -->
-                                    </div>
-                                    <div class="col-lg-3 col-sm-6">
-                                        <!-- Single Courses Start -->
-                                        <div class="single-course">
-                                            <div class="courses-image">
-                                                <a href="course-details.php"><img src="assets/images/courses/courses-5.jpg" alt="Courses"></a>
-                                            </div>
-                                            <div class="courses-content">
-                                                <div class="top-meta">
-                                                    <div class="tag-time">
-                                                        <a class="tag" href="#">Beginner</a>
-                                                        <p class="time"><i class="far fa-clock"></i> 2h 30m</p>
-                                                    </div>
-                                                    <span class="price">
-                                                    <span class="sale-price">$59</span>
-                                                    </span>
-                                                </div>
-                                                <h3 class="title"><a href="course-details.php">The Complete JavaScript Course for Beginner</a></h3>
-                                                <div class="courses-meta">
-                                                    <p class="author-name"><span>By</span> Andrew paker</p>
-                                                    <div class="rating">
-                                                        <div class="rating-star">
-                                                            <div class="rating-active" style="width: 60%;"></div>
-                                                        </div>
-                                                        <span>(4.5)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Courses End -->
-                                    </div>
-                                    <div class="col-lg-3 col-sm-6">
-                                        <!-- Single Courses Start -->
-                                        <div class="single-course">
-                                            <div class="courses-image">
-                                                <a href="course-details.php"><img src="assets/images/courses/courses-6.jpg" alt="Courses"></a>
-                                            </div>
-                                            <div class="courses-content">
-                                                <div class="top-meta">
-                                                    <div class="tag-time">
-                                                        <a class="tag" href="#">Beginner</a>
-                                                        <p class="time"><i class="far fa-clock"></i> 2h 30m</p>
-                                                    </div>
-                                                    <span class="price">
-                                                    <span class="sale-price">Free</span>
-                                                    </span>
-                                                </div>
-                                                <h3 class="title"><a href="course-details.php">Getting Started with the Linux Command Line</a></h3>
-                                                <div class="courses-meta">
-                                                    <p class="author-name"><span>By</span> Daziy Millar</p>
-                                                    <div class="rating">
-                                                        <div class="rating-star">
-                                                            <div class="rating-active" style="width: 60%;"></div>
-                                                        </div>
-                                                        <span>(4.5)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Courses End -->
-                                    </div>
-                                    <div class="col-lg-3 col-sm-6">
-                                        <!-- Single Courses Start -->
-                                        <div class="single-course">
-                                            <div class="courses-image">
-                                                <a href="course-details.php"><img src="assets/images/courses/courses-7.jpg" alt="Courses"></a>
-                                            </div>
-                                            <div class="courses-content">
-                                                <div class="top-meta">
-                                                    <div class="tag-time">
-                                                        <a class="tag" href="#">Beginner</a>
-                                                        <p class="time"><i class="far fa-clock"></i> 2h 30m</p>
-                                                    </div>
-                                                    <span class="price">
-                                                    <span class="sale-price">$29</span>
-                                                    </span>
-                                                </div>
-                                                <h3 class="title"><a href="course-details.php">The Complete Web Developer Course</a></h3>
-                                                <div class="courses-meta">
-                                                    <p class="author-name"><span>By</span> Rosy Janner</p>
-                                                    <div class="rating">
-                                                        <div class="rating-star">
-                                                            <div class="rating-active" style="width: 60%;"></div>
-                                                        </div>
-                                                        <span>(4.5)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Courses End -->
-                                    </div>
-                                    <div class="col-lg-3 col-sm-6">
-                                        <!-- Single Courses Start -->
-                                        <div class="single-course">
-                                            <div class="courses-image">
-                                                <a href="course-details.php"><img src="assets/images/courses/courses-8.jpg" alt="Courses"></a>
-                                            </div>
-                                            <div class="courses-content">
-                                                <div class="top-meta">
-                                                    <div class="tag-time">
-                                                        <a class="tag" href="#">Beginner</a>
-                                                        <p class="time"><i class="far fa-clock"></i> 2h 30m</p>
-                                                    </div>
-                                                    <span class="price">
-                                                    <span class="sale-price">Free</span>
-                                                    </span>
-                                                </div>
-                                                <h3 class="title"><a href="course-details.php">Getting Started with the Linux Command Line</a></h3>
-                                                <div class="courses-meta">
-                                                    <p class="author-name"><span>By</span> Andrew paker</p>
-                                                    <div class="rating">
-                                                        <div class="rating-star">
-                                                            <div class="rating-active" style="width: 60%;"></div>
-                                                        </div>
-                                                        <span>(4.5)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Courses End -->
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="tab-pane fade" id="tab5">
-
-                                <div class="row">
-                                    <div class="col-lg-3 col-sm-6">
-                                        <!-- Single Courses Start -->
-                                        <div class="single-course">
-                                            <div class="courses-image">
-                                                <a href="course-details.php"><img src="assets/images/courses/courses-1.jpg" alt="Courses"></a>
-                                            </div>
-                                            <div class="courses-content">
-                                                <div class="top-meta">
-                                                    <div class="tag-time">
-                                                        <a class="tag" href="#">Beginner</a>
-                                                        <p class="time"><i class="far fa-clock"></i> 2h 30m</p>
-                                                    </div>
-                                                    <span class="price">
-                                                    <span class="sale-price">Free</span>
-                                                    </span>
-                                                </div>
-                                                <h3 class="title"><a href="course-details.php">Getting Started with the Linux Command Line</a></h3>
-                                                <div class="courses-meta">
-                                                    <p class="author-name"><span>By</span> Andrew paker</p>
-                                                    <div class="rating">
-                                                        <div class="rating-star">
-                                                            <div class="rating-active" style="width: 60%;"></div>
-                                                        </div>
-                                                        <span>(4.5)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Courses End -->
-                                    </div>
-                                    <div class="col-lg-3 col-sm-6">
-                                        <!-- Single Courses Start -->
-                                        <div class="single-course">
-                                            <div class="courses-image">
-                                                <a href="course-details.php"><img src="assets/images/courses/courses-2.jpg" alt="Courses"></a>
-                                            </div>
-                                            <div class="courses-content">
-                                                <div class="top-meta">
-                                                    <div class="tag-time">
-                                                        <a class="tag" href="#">Beginner</a>
-                                                        <p class="time"><i class="far fa-clock"></i> 2h 30m</p>
-                                                    </div>
-                                                    <span class="price">
-                                                    <span class="sale-price">$49</span>
-                                                    </span>
-                                                </div>
-                                                <h3 class="title"><a href="course-details.php">Learn PHP Programming From Scratch</a></h3>
-                                                <div class="courses-meta">
-                                                    <p class="author-name"><span>By</span> Andrew paker</p>
-                                                    <div class="rating">
-                                                        <div class="rating-star">
-                                                            <div class="rating-active" style="width: 60%;"></div>
-                                                        </div>
-                                                        <span>(4.5)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Courses End -->
-                                    </div>
-                                    <div class="col-lg-3 col-sm-6">
-                                        <!-- Single Courses Start -->
-                                        <div class="single-course">
-                                            <div class="courses-image">
-                                                <a href="course-details.php"><img src="assets/images/courses/courses-3.jpg" alt="Courses"></a>
-                                            </div>
-                                            <div class="courses-content">
-                                                <div class="top-meta">
-                                                    <div class="tag-time">
-                                                        <a class="tag" href="#">Beginner</a>
-                                                        <p class="time"><i class="far fa-clock"></i> 2h 30m</p>
-                                                    </div>
-                                                    <span class="price">
-                                                    <span class="sale-price">$25</span>
-                                                    </span>
-                                                </div>
-                                                <h3 class="title"><a href="course-details.php">Build A Full Web Chat App From Scratch</a></h3>
-                                                <div class="courses-meta">
-                                                    <p class="author-name"><span>By</span> Mike Hussy</p>
-                                                    <div class="rating">
-                                                        <div class="rating-star">
-                                                            <div class="rating-active" style="width: 60%;"></div>
-                                                        </div>
-                                                        <span>(4.5)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Courses End -->
-                                    </div>
-                                    <div class="col-lg-3 col-sm-6">
-                                        <!-- Single Courses Start -->
-                                        <div class="single-course">
-                                            <div class="courses-image">
-                                                <a href="course-details.php"><img src="assets/images/courses/courses-4.jpg" alt="Courses"></a>
-                                            </div>
-                                            <div class="courses-content">
-                                                <div class="top-meta">
-                                                    <div class="tag-time">
-                                                        <a class="tag" href="#">Beginner</a>
-                                                        <p class="time"><i class="far fa-clock"></i> 2h 30m</p>
-                                                    </div>
-                                                    <span class="price">
-                                                    <span class="sale-price">Free</span>
-                                                    </span>
-                                                </div>
-                                                <h3 class="title"><a href="course-details.php">Getting Started with the Linux Command Line</a></h3>
-                                                <div class="courses-meta">
-                                                    <p class="author-name"><span>By</span> Andrew paker</p>
-                                                    <div class="rating">
-                                                        <div class="rating-star">
-                                                            <div class="rating-active" style="width: 60%;"></div>
-                                                        </div>
-                                                        <span>(4.5)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Courses End -->
-                                    </div>
-                                    <div class="col-lg-3 col-sm-6">
-                                        <!-- Single Courses Start -->
-                                        <div class="single-course">
-                                            <div class="courses-image">
-                                                <a href="course-details.php"><img src="assets/images/courses/courses-5.jpg" alt="Courses"></a>
-                                            </div>
-                                            <div class="courses-content">
-                                                <div class="top-meta">
-                                                    <div class="tag-time">
-                                                        <a class="tag" href="#">Beginner</a>
-                                                        <p class="time"><i class="far fa-clock"></i> 2h 30m</p>
-                                                    </div>
-                                                    <span class="price">
-                                                    <span class="sale-price">$59</span>
-                                                    </span>
-                                                </div>
-                                                <h3 class="title"><a href="course-details.php">The Complete JavaScript Course for Beginner</a></h3>
-                                                <div class="courses-meta">
-                                                    <p class="author-name"><span>By</span> Andrew paker</p>
-                                                    <div class="rating">
-                                                        <div class="rating-star">
-                                                            <div class="rating-active" style="width: 60%;"></div>
-                                                        </div>
-                                                        <span>(4.5)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Courses End -->
-                                    </div>
-                                    <div class="col-lg-3 col-sm-6">
-                                        <!-- Single Courses Start -->
-                                        <div class="single-course">
-                                            <div class="courses-image">
-                                                <a href="course-details.php"><img src="assets/images/courses/courses-6.jpg" alt="Courses"></a>
-                                            </div>
-                                            <div class="courses-content">
-                                                <div class="top-meta">
-                                                    <div class="tag-time">
-                                                        <a class="tag" href="#">Beginner</a>
-                                                        <p class="time"><i class="far fa-clock"></i> 2h 30m</p>
-                                                    </div>
-                                                    <span class="price">
-                                                    <span class="sale-price">Free</span>
-                                                    </span>
-                                                </div>
-                                                <h3 class="title"><a href="course-details.php">Getting Started with the Linux Command Line</a></h3>
-                                                <div class="courses-meta">
-                                                    <p class="author-name"><span>By</span> Daziy Millar</p>
-                                                    <div class="rating">
-                                                        <div class="rating-star">
-                                                            <div class="rating-active" style="width: 60%;"></div>
-                                                        </div>
-                                                        <span>(4.5)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Courses End -->
-                                    </div>
-                                    <div class="col-lg-3 col-sm-6">
-                                        <!-- Single Courses Start -->
-                                        <div class="single-course">
-                                            <div class="courses-image">
-                                                <a href="course-details.php"><img src="assets/images/courses/courses-7.jpg" alt="Courses"></a>
-                                            </div>
-                                            <div class="courses-content">
-                                                <div class="top-meta">
-                                                    <div class="tag-time">
-                                                        <a class="tag" href="#">Beginner</a>
-                                                        <p class="time"><i class="far fa-clock"></i> 2h 30m</p>
-                                                    </div>
-                                                    <span class="price">
-                                                    <span class="sale-price">$29</span>
-                                                    </span>
-                                                </div>
-                                                <h3 class="title"><a href="course-details.php">The Complete Web Developer Course</a></h3>
-                                                <div class="courses-meta">
-                                                    <p class="author-name"><span>By</span> Rosy Janner</p>
-                                                    <div class="rating">
-                                                        <div class="rating-star">
-                                                            <div class="rating-active" style="width: 60%;"></div>
-                                                        </div>
-                                                        <span>(4.5)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Courses End -->
-                                    </div>
-                                    <div class="col-lg-3 col-sm-6">
-                                        <!-- Single Courses Start -->
-                                        <div class="single-course">
-                                            <div class="courses-image">
-                                                <a href="course-details.php"><img src="assets/images/courses/courses-8.jpg" alt="Courses"></a>
-                                            </div>
-                                            <div class="courses-content">
-                                                <div class="top-meta">
-                                                    <div class="tag-time">
-                                                        <a class="tag" href="#">Beginner</a>
-                                                        <p class="time"><i class="far fa-clock"></i> 2h 30m</p>
-                                                    </div>
-                                                    <span class="price">
-                                                    <span class="sale-price">Free</span>
-                                                    </span>
-                                                </div>
-                                                <h3 class="title"><a href="course-details.php">Getting Started with the Linux Command Line</a></h3>
-                                                <div class="courses-meta">
-                                                    <p class="author-name"><span>By</span> Andrew paker</p>
-                                                    <div class="rating">
-                                                        <div class="rating-star">
-                                                            <div class="rating-active" style="width: 60%;"></div>
-                                                        </div>
-                                                        <span>(4.5)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Courses End -->
-                                    </div>
-                                </div>
-
-                            </div>
+                            
                         </div>
                         <!-- Courses Tab Content End -->
 
@@ -1259,7 +307,50 @@
         <?php include_once "footer.php" ?>
     </div>
     
+    <script type="text/javascript">
+        $('.delete').click(function () {
+            let id = $(this).attr("id");
+            swal({
+                title: "Ishonchingiz komilmi?",
+                text: "O'chirilgandan so'ng tiklab bo'lmaydi",
+                icon: "warning",
+                buttons:{
+                    cansel:"Yo'q!",
+                    catch: {
+                        text: "Ha roziman!",
+                        value: "qabul",
+                    },
+                },
+            })
+            .then((willDelete)=>{
+                if (willDelete=='qabul'){
+                    $.ajax({
+                        url:"delete.php",
+                        type:"GET",
+                        data:{
+                            id:id,
+                        },
+                        success:function(data){
+                            let obj =jQuery.parseJSON(data);
+                            if (obj.xatolik == 0){
+                                $('#t'+id).remove();
+                                swal("O'chirildi!", obj.xabar, "success");
+                            }
+                            else{
+                                swal("Xatolik!", obj.xabar, "error");
+                            }
+                        },
+                        error:function(xhr){
+                            alert("Kechirasiz internetdan uzilish ro'y berdi. Iltimos tekshirib qaytadan urining");
+                        },
+                    });
+                }else{
+                    swal("Bekor qilindi!");
+                }
+            });
+        })
+    </script>
+
     <?php include_once 'script.php';?>
 </body>
-<!-- Mirrored from thepixelcurve.com/html/upstudy/upstudy/index.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 22 May 2023 08:40:12 GMT -->
 </html>

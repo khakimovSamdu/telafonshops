@@ -22,7 +22,7 @@
                             <div class="header-menu d-none d-lg-block">
                                 <ul class="main-menu">
                                     <li class="active-menu">
-                                        <a href="index.php">Home</a>
+                                        <a href="index.php">Bosh sahifa</a>
                                         <ul class="sub-menu">
                                             <li class="active"><a href="index.php">Main Demo</a></li>
                                             <li><a href="index-2.php">Course Hub</a></li>
@@ -30,7 +30,7 @@
                                             <li><a href="index-5.php">Language</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">Pages</a>
+                                    <li><a href="#">Telafon xaqida</a>
                                         <ul class="sub-menu">
                                             <li><a href="about.php">About Us</a></li>
                                             <li><a href="event.php">Event</a></li>
@@ -38,11 +38,16 @@
                                             <li><a href="error.php">404 Page</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="course-grid.php">Courses</a>
+                                    <li><a href="course-grid.php">Smartfonlar</a>
                                         <ul class="sub-menu">
-                                            <li><a href="course-grid.php">Course Grid</a></li>
-                                            <li><a href="course-list.php">Course List</a></li>
-                                            <li><a href="course-details.php">Course Details</a></li>
+                                            <li><a href="course-details.php">Apple</a></li>
+                                            <li><a href="course-details.php">Samsung</a></li>
+                                            <li><a href="course-grid.php">Huawei</a></li>
+                                            <li><a href="course-list.php">Oppo</a></li>
+                                            <li><a href="course-details.php">Nokia</a></li>
+                                            <li><a href="course-details.php">Redmi</a></li>
+                                            <li><a href="course-details.php">Vivo</a></li>
+                                            
                                         </ul>
                                     </li>
                                     <li><a href="blog.php">Blog</a>
@@ -75,67 +80,9 @@
                             </div>
 
                             <div class="header-cart dropdown">
-                                <button class="cart-btn" data-bs-toggle="dropdown">
-                                    <i class="flaticon-shopping-cart"></i>
-                                    <span class="count">3</span>
-                                </button>
-                                <div class="dropdown-menu dropdown-cart">
-                                    <!-- Cart Items Start -->
-                                    <div class="cart-items">
-                                        <!-- Single Cart Item Start -->
-                                        <div class="single-cart-item">
-                                            <div class="item-image">
-                                                <img src="assets/images/shop-cart-1.jpg" alt="Cart">
-                                            </div>
-                                            <div class="item-content">
-                                                <h4 class="title"><a href="#">Smart Gear Watch</a></h4>
-                                                <span class="quantity"> 2 x $59.99 </span>
-                                            </div>
-                                            <button class="btn-close"></button>
-                                        </div>
-                                        <!-- Single Cart Item End -->
-                                        <!-- Single Cart Item Start -->
-                                        <div class="single-cart-item">
-                                            <div class="item-image">
-                                                <img src="assets/images/shop-cart-2.jpg" alt="Cart">
-                                            </div>
-                                            <div class="item-content">
-                                                <h4 class="title"><a href="#">Smart Gear Watch</a></h4>
-                                                <span class="quantity"> 2 x $59.99 </span>
-                                            </div>
-                                            <button class="btn-close"></button>
-                                        </div>
-                                        <!-- Single Cart Item End -->
-                                        <!-- Single Cart Item Start -->
-                                        <div class="single-cart-item">
-                                            <div class="item-image">
-                                                <img src="assets/images/shop-cart-3.jpg" alt="Cart">
-                                            </div>
-                                            <div class="item-content">
-                                                <h4 class="title"><a href="#">Smart Gear Watch</a></h4>
-                                                <span class="quantity"> 2 x $59.99 </span>
-                                            </div>
-                                            <button class="btn-close"></button>
-                                        </div>
-                                        <!-- Single Cart Item End -->
-                                    </div>
-                                    <!-- Cart Items End -->
-
-                                    <!-- Cart Total Start -->
-                                    <div class="cart-total">
-                                        <span class="label">Subtotal:</span>
-                                        <span class="value">$229.95</span>
-                                    </div>
-                                    <!-- Cart Total End -->
-
-                                    <!-- Cart Button Start -->
-                                    <div class="cart-btns">
-                                        <a href="#" class="btn">View Cart</a>
-                                        <a href="#" class="btn btn-white">Checkout</a>
-                                    </div>
-                                    <!-- Cart Button End -->
-                                </div>
+                                
                             </div>
+
 
                             <div class="header-toggle d-lg-none">
                                 <button data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
