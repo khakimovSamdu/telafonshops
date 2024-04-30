@@ -33,12 +33,9 @@
                                     <li><a href="#">Pages</a>
                                         <ul class="sub-menu">
                                             <li><a href="about.php">About Us</a></li>
-                                            <li><a href="team.php">Team</a></li>
-                                            <li><a href="team-details.php">Team Single</a></li>
                                             <li><a href="event.php">Event</a></li>
                                             <li><a href="faq.php">Faq's</a></li>
                                             <li><a href="error.php">404 Page</a></li>
-                                            <li><a href="login-register.php">Login Register</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="course-grid.php">Courses</a>
@@ -73,8 +70,8 @@
                             </div>
 
                             <div class="header-login d-none d-lg-block">
-                                <a class="link" href="login-register.php"><i class="far fa-user"></i> Login</a>
-                                <a class="link" href="login-register.php">Register</a>
+                                <a class="link" href="login.php"><i class="far fa-user"></i> Login</a>
+                                <a class="link" href="register.php">Register</a>
                             </div>
 
                             <div class="header-cart dropdown">

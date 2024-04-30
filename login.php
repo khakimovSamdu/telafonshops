@@ -87,7 +87,7 @@
                     data:$('#logform').serialize(),
                     success:function(data){
                         let obj = jQuery.parseJSON(data);
-                        console.log(obj);
+                        // console.log(obj);
                         if (obj.xatolik == 0){
                             swal("Good job!", obj.xabar, "success");
                         }

@@ -3,13 +3,10 @@
 
     $user = $_POST['username'];
     $pass = md5($_POST['password']);
-    $query = "SELECT * FROM cilent WHERE username='$user' AND parol='$pass';";
+    $query = "SELECT * FROM cilent WHERE username='$user' AND password='$pass';";
     $sql = mysqli_query($link, $query);
-    $user = mysqli_fetch_assoc($sql);
-    print_r($user);
-    exit;
     $ret = [];
-    if ($user['id']!=0){
+    if ($sql){
         $ret += ['xatolik'=>0, 'xabar'=>'Siz tizimga muvaffaqiyatli kirdingiz!'];
     }
     else{

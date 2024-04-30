@@ -53,49 +53,7 @@
 
         <!-- Offcanvas Start -->
         <div class="offcanvas offcanvas-start" id="offcanvasMenu">
-
-
-            <div class="offcanvas-body">
-                <div class="offcanvas-menu">
-                    <ul class="main-menu">
-                        <li class="active-menu">
-                            <a href="index.php">Home</a>
-                            <ul class="sub-menu">
-                                <li class="active"><a href="index.php">Main Demo</a></li>
-                                <li><a href="index-2.php">Course Hub</a></li>
-                                <li><a href="index-3.php">Distant Learning</a></li>
-                                <li><a href="index-5.php">Language</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Pages</a>
-                            <ul class="sub-menu">
-                                <li><a href="about.php">About Us</a></li>
-                                <li><a href="team.php">Team</a></li>
-                                <li><a href="team-details.php">Team Single</a></li>
-                                <li><a href="event.php">Event</a></li>
-                                <li><a href="faq.php">Faq's</a></li>
-                                <li><a href="error.php">404 Page</a></li>
-                                <li><a href="login-register.php">Login Register</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="course-grid.php">Courses</a>
-                            <ul class="sub-menu">
-                                <li><a href="course-grid.php">Course Grid</a></li>
-                                <li><a href="course-list.php">Course List</a></li>
-                                <li><a href="course-details.php">Course Details</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="blog.php">Blog</a>
-                            <ul class="sub-menu">
-                                <li><a href="blog.php">Blog</a></li>
-                                <li><a href="blog-list.php">Blog List</a></li>
-                                <li><a href="blog-details.php">Blog Details</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="contact.php">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
+            <?php include_once 'offcanvas-body.php' ?>
         </div>
         <!-- Offcanvas End -->
 
@@ -119,8 +77,8 @@
                     <div class="col-lg-6">
                         <!-- Hero Content Start -->
                         <div class="hero-content">
-                            <p class="text" data-aos="fade-up" data-aos-delay="800"><img src="assets/images/energy.png" alt=""> Learn From 20,000+ Powerful Courses</p>
-                            <h2 class="title" data-aos="fade-up" data-aos-delay="700">Best <span>platform</span> to Empower Skills</h2>
+                            <p class="text" data-aos="fade-up" data-aos-delay="800"><img src="assets/images/energy.png" alt="">Shop from over 20,000+ top phones</p>
+                            <h2 class="title" data-aos="fade-up" data-aos-delay="700">The best site for those who want  to buy a phone</h2>
                             <div class="hero-btn" data-aos="fade-up" data-aos-delay="900">
                                 <a class="btn" href="login-register.php">Try 7 days Free Trial</a>
                             </div>
@@ -137,14 +95,8 @@
                                 <img src="assets/images/shape/shape-7.png" alt="">
                             </div>
                             <div class="image">
-                                <img src="assets/images/hero-img.png" alt="">
-                                <div class="image-content text-center">
-                                    <img src="assets/images/student-img.png" alt="">
-                                    <div class="image-text">
-                                        <h3 class="number">100k+</h3>
-                                        <p>Total Enrolled Students</p>
-                                    </div>
-                                </div>
+                                <img src="assets/images/devoloper.jpg" alt="">
+                                
                             </div>
                         </div>
                         <!-- Hero Images End -->
