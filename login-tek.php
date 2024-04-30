@@ -5,6 +5,7 @@
     $sql = mysqli_query($link, $query);
     $user = mysqli_fetch_assoc($sql);
     $ret = [];
+
     if ($user['id']==0){
         $ret += ['xatolik'=>0, 'xabar'=>"Muvaffaqqiyatli"];
     }else{

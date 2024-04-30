@@ -225,8 +225,7 @@
                                                 <h5>💾 <?=$fetch['RAM']?> / <?=$fetch['memory']?></h5>
                                                 <div>
                                                     <button type="button" class="btn btn-lg btn-warning " style="background-color: #d9a630; margin: 6px; 0"><a style="text-decoration: none;color:white" href="phone-update.php?id=<?=$fetch['id']?>">Update</a></button> 
-                                                    <button type="button" class="btn btn-lg btn-danger " style="background-color: #de221f; margin: 6px 0;" id="<?=$fetch['id']?>" >Delete</button>
-                                                
+                                                    <button type="button" class="btn btn-lg btn-danger " style="background-color: #de221f; margin: 6px 0;" id='delete' ><a style="text-decoration: none;color:white" href="delete.php?id=<?=$fetch['id']?>">Delete</a></button>
                                                 </div>
                                                 
                                                 <div class="courses-meta">
@@ -307,23 +306,25 @@
         <?php include_once "footer.php" ?>
     </div>
     
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/sweetalert.min.js"></script>
     <script type="text/javascript">
-        $('.delete').click(function () {
+        $('#delete').click(function () {
             let id = $(this).attr("id");
             swal({
                 title: "Ishonchingiz komilmi?",
                 text: "O'chirilgandan so'ng tiklab bo'lmaydi",
                 icon: "warning",
                 buttons:{
-                    cansel:"Yo'q!",
-                    catch: {
-                        text: "Ha roziman!",
-                        value: "qabul",
+                    cancel:"Yo'q!",
+                    confirm: {
+                        text: "Ha, roziman!",
+                        value: true,
                     },
                 },
             })
             .then((willDelete)=>{
-                if (willDelete=='qabul'){
+                if (willDelete){
                     $.ajax({
                         url:"delete.php",
                         type:"GET",
@@ -331,7 +332,8 @@
                             id:id,
                         },
                         success:function(data){
-                            let obj =jQuery.parseJSON(data);
+                            let obj = jQuery.parseJSON(data);
+                            console.log(obj);
                             if (obj.xatolik == 0){
                                 $('#t'+id).remove();
                                 swal("O'chirildi!", obj.xabar, "success");
@@ -341,14 +343,14 @@
                             }
                         },
                         error:function(xhr){
-                            alert("Kechirasiz internetdan uzilish ro'y berdi. Iltimos tekshirib qaytadan urining");
+                            alert("Kechirasiz, internetdan uzilish ro'y berdi. Iltimos tekshirib qaytadan urining");
                         },
                     });
                 }else{
                     swal("Bekor qilindi!");
                 }
             });
-        })
+        });
     </script>
 
     <?php include_once 'script.php';?>

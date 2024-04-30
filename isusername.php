@@ -5,8 +5,9 @@
     $pass = md5($_POST['password']);
     $query = "SELECT * FROM cilent WHERE username='$user' AND password='$pass';";
     $sql = mysqli_query($link, $query);
+    $fetch = mysqli_fetch_assoc($sql);
     $ret = [];
-    if ($sql){
+    if ($fetch){
         $ret += ['xatolik'=>0, 'xabar'=>'Siz tizimga muvaffaqiyatli kirdingiz!'];
     }
     else{

@@ -54,7 +54,7 @@
                                             <input type="password" name='password' class="form-control"  placeholder="Your password" id = 'pass'>
                                         </div>
                                         <div class="form-btn">
-                                            <button type="submit" class="btn">Login</button>
+                                            <button type="submit" class="btn" onclick='o_tish()'>Login</button>
                                             <div class="signup">
                                                 <span class="signup">Already have an account?
                                                 <a href="register.php">Register</a>
@@ -90,6 +90,11 @@
                         // console.log(obj);
                         if (obj.xatolik == 0){
                             swal("Good job!", obj.xabar, "success");
+                            function o_tish() {
+                            let manzil = "index.php";                            
+                            window.location.href = manzil;
+                            }
+                            o_tish();
                         }
                         else{
                             $('#pass').val('');
@@ -99,7 +104,9 @@
                     error:function(){
                         alert("Internetingizda muammo bor qaytadan urinib ko'ring!")
                     }
+                    
                 });
+                
             })
         </script>
 

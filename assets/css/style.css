@@ -840,6 +840,7 @@ textarea:-ms-input-placeholder {
 
 .header-logo {
   flex-shrink: 0;
+  
 }
 
 @media only screen and (max-width: 1199px) {
