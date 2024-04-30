@@ -208,7 +208,7 @@
                                         <!-- Single Courses Start -->
                                         <div class="single-course">
                                             <div class="courses-image" >
-                                                <a href="" ><img style="height: 350px;" src="<?=$fetch['img_url']?>" alt="Courses"></a>
+                                                <img style="height: 300px;" src="<?=$fetch['img_url']?>" alt="Courses">
                                             </div>
                                             <div class="courses-content">
                                                 <div class="top-meta">
@@ -224,8 +224,8 @@
                                                 <h5>🎨 <?=$fetch['color']?></h5>
                                                 <h5>💾 <?=$fetch['RAM']?> / <?=$fetch['memory']?></h5>
                                                 <div>
-                                                    <button type="button" class="btn btn-lg btn-warning " style="background-color: #d9a630;"><a style="text-decoration: none;color:white" href="phone-update.php?id=<?=$fetch['id']?>">Update</a></button> 
-                                                    <button type="button" class="btn btn-lg btn-danger " style="background-color: #de221f;" id="<?=$fetch['id']?>" >Delete</button>
+                                                    <button type="button" class="btn btn-lg btn-warning " style="background-color: #d9a630; margin: 6px; 0"><a style="text-decoration: none;color:white" href="phone-update.php?id=<?=$fetch['id']?>">Update</a></button> 
+                                                    <button type="button" class="btn btn-lg btn-danger " style="background-color: #de221f; margin: 6px 0;" id="<?=$fetch['id']?>" >Delete</button>
                                                 
                                                 </div>
                                                 
@@ -249,7 +249,7 @@
                                         <!-- Single Courses Start -->
                                         <div class="single-course">
                                             <div class="courses-image">
-                                                <a href=""><img style="height: 350px;" src="assets/images/iphone.webp" alt="Courses"></a>
+                                                <img style="height: 300px;" src="assets/images/iphone.webp" alt="Courses">
                                             </div>
                                             <div class="courses-content">
                                                 <div class="top-meta">
@@ -265,7 +265,7 @@
                                                 <h5>🎨 Telafon rang</h5>
                                                 <h5>💾 RAM / ROM</h5>
                                                 <div>
-                                                    <button style="display: block; width:100%; background-color:#06b823" class='btn btn-primary'><a style="text-decoration: none;color:white" href="phone-insert.php">+ INSERT</a></button>
+                                                    <button style="display: block; width:100%; background-color:#06b823; margin-top: 6px" class='btn btn-primary'><a style="text-decoration: none;color:white" href="phone-insert.php">+ INSERT</a></button>
                                                 </div>
                                                 <div class="courses-meta">
                                                     <p class="author-name"><span>By</span> Xakimov Allamurod</p>

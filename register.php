@@ -70,7 +70,7 @@
                                             <p id='mesg' style="font-size:14px; color:red;"></p>
                                         </div>
                                         <div class="form-btn">
-                                            <button type="submit" class="btn">Register</button>
+                                            <button type="submit" class="btn" onclick='o_tish()'>Register</button>
                                             <div class="signup">
                                                 <span class="signup">Already have an account?
                                                 <a href="login.php">Login</a>
@@ -108,14 +108,15 @@
                         if (obj.xatolik != 0){
                             $('#helpblock').css('display', 'block');
                             $("#helpblock").html(obj.xabar);
-                            $('#first').val('');
-                            $('#last').val('');
-                            $('#lgn').val('');
-                            $('#pas1').val('');
-                            $('#pas2').val('');
+                            
                         }
                         else{
                             $('#helpblock').css('display', 'none');
+                            // $('#first').val('');
+                            // $('#last').val('');
+                            // $('#lgn').val('');
+                            // $('#pas1').val('');
+                            // $('#pas2').val('');
                         }
                         
                     },
@@ -150,6 +151,11 @@
                         alert('Xatolik yuz berdi');
                     }
                 });
+                function o_tish() {
+                    let manzil = "index.php";                            
+                    window.location.href = manzil;
+                }
+                o_tish();
             })
 
         </script>

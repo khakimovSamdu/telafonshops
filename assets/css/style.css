@@ -3457,6 +3457,8 @@ textarea:-ms-input-placeholder {
   transition: all 0.3s linear;
   margin-top: 30px;
   position: relative;
+  box-shadow: 5px 5px black;
+
 }
 
 .single-course .courses-image {

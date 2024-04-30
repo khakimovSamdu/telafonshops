@@ -46,11 +46,7 @@
                     // console.log(obj);
                     if(obj.xatolik == 0){
                         swal("Good update!", obj.xabar, "success");
-                        function o_tish() {
-                            let manzil = "index.php";                            
-                            window.location.href = manzil;
-                        }
-                        o_tish();
+                        
                     }
                     else{
                         swal("Update error!", obj.xabar, "error");
@@ -60,6 +56,11 @@
                     alert("Serverda xatolik yuz berdi qaytadan urinib ko'ring");
                 }
             });
+            function o_tish() {
+                let manzil = "index.php";                            
+                window.location.href = manzil;
+            }
+            o_tish();
         })
     </script>
 
