@@ -18,7 +18,7 @@
                                     </div>
                                     <div class="info-text">
                                         <p class="call-text">Call Us Free</p>
-                                        <a href="tel:+91458654528">+91 458 654 528</a>
+                                        <a href="tel:+91458654528">+998 (93) 855-46-40</a>
                                     </div>
                                 </div>
                             </div>
@@ -78,7 +78,7 @@
                             <div class="col-lg-6 col-md-6">
                                 <!-- Footer Copyright Text Start -->
                                 <div class="copyright-text">
-                                    <p>© Copyright 2023 upstudy All rights reserved. </p>
+                                    <p>© allamurod.xakimov</p>
                                 </div>
                                 <!-- Footer Copyright Text End -->
                             </div>
