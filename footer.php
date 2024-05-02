@@ -11,7 +11,7 @@
                                 <div class="footer-logo">
                                     <a href="index.php"><img src="assets/images/logo-white.png" alt=""></a>
                                 </div>
-                                <p class="text">World largest online learning platform. Download our apps to start learning.</p>
+                                <p class="text">Samarqand telafon dokoni. O'rganishni boshlash uchun ilovalarimizni yuklab oling.</p>
                                 <div class="widget-info">
                                     <div class="info-icon">
                                         <i class="flaticon-phone-call"></i>

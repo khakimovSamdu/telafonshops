@@ -69,7 +69,7 @@
                         <div class="header-meta">
                             <div class="header-search d-none d-xl-block">
                                 <form action="#">
-                                    <input type="text" placeholder="Search Courses">
+                                    <input type="text" placeholder="Search Phone">
                                     <button><i class="flaticon-loupe"></i></button>
                                 </form>
                             </div>
