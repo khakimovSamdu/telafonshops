@@ -225,7 +225,7 @@
                                                 <h5>💾 <?=$fetch['RAM']?> / <?=$fetch['memory']?></h5>
                                                 <div>
                                                     <button type="button" class="btn btn-lg btn-warning " style="background-color: #d9a630; margin: 6px; 0"><a style="text-decoration: none;color:white" href="phone-update.php?id=<?=$fetch['id']?>">Update</a></button> 
-                                                    <button type="button" class="btn btn-lg btn-danger " style="background-color: #de221f; margin: 6px 0;" id='delete' ><a style="text-decoration: none;color:white" href="delete.php?id=<?=$fetch['id']?>">Delete</a></button>
+                                                    <button type="button" class="btn btn-lg btn-danger " style="background-color: #de221f; margin: 6px 0;" id='delete' ><a style="text-decoration: none;color:white" href="delete.php?id=<?=$fetch['id']?>" onclick='o_tish()'>Delete</a></button>
                                                 </div>
                                                 
                                                 <div class="courses-meta">
@@ -309,6 +309,7 @@
     <script src="../js/jquery-3.6.0.min.js"></script>
     <script src="../js/sweetalert.min.js"></script>
     <script type="text/javascript">
+        
         $('#delete').click(function () {
             let id = $(this).attr("id");
             swal({
@@ -337,6 +338,7 @@
                             if (obj.xatolik == 0){
                                 $('#t'+id).remove();
                                 swal("O'chirildi!", obj.xabar, "success");
+                                
                             }
                             else{
                                 swal("Xatolik!", obj.xabar, "error");
@@ -352,7 +354,6 @@
             });
         });
     </script>
-
     <?php include_once 'script.php';?>
 </body>
 </html>
