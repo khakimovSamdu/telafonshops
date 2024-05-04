@@ -9,7 +9,7 @@
                             <!-- Footer Widget Start -->
                             <div class="footer-widget widget-about">
                                 <div class="footer-logo">
-                                    <a href="index.php"><img src="assets/images/logo-white.png" alt=""></a>
+                                    <a href="index.php"><img style="width: 160px; height:80px;"  src="assets/images/logotip.jpg" alt=""></a>
                                 </div>
                                 <p class="text">Samarqand telafon dokoni. O'rganishni boshlash uchun ilovalarimizni yuklab oling.</p>
                                 <div class="widget-info">

@@ -18,7 +18,7 @@
             <input type="text" name="ram" placeholder="Smartphone RAM"  required>
             <input type="text" name="memory" placeholder="Smartphone memory" required>
             <input type="text" name="price" placeholder="Smartphone price" required>
-            <input type="text" name="img_url" placeholder="Smartphone img url" required>
+            <input type="file" name="img_url" placeholder="Smartphone img url" required>
             <button type="submit" onclick='o_tish()'>Insert</button>
       </form>
     </div>
@@ -47,10 +47,10 @@
                     alert("Serverda xatolik yuz berdi qaytadan urinib ko'ring");
                 }
             });
-            function o_tish() {
-                    let manzil = "index.php";                            
-                    window.location.href = manzil;
-            }
+            setTimeout(function o_tish () {
+                let manzil = "index.php";                            
+                window.location.href = manzil;
+		    }, 2500);      
             o_tish();
         })
     </script>

@@ -23,39 +23,22 @@
                                 <ul class="main-menu">
                                     <li class="active-menu">
                                         <a href="index.php">Bosh sahifa</a>
-                                        <ul class="sub-menu">
-                                            <li class="active"><a href="index.php">Main Demo</a></li>
-                                            <li><a href="index-2.php">Course Hub</a></li>
-                                            <li><a href="index-3.php">Distant Learning</a></li>
-                                            <li><a href="index-5.php">Language</a></li>
-                                        </ul>
                                     </li>
-                                    <li><a href="#">Telafon xaqida</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="about.php">About Us</a></li>
-                                            <li><a href="event.php">Event</a></li>
-                                            <li><a href="faq.php">Faq's</a></li>
-                                            <li><a href="error.php">404 Page</a></li>
-                                        </ul>
+                                    <li><a href="index-2.php">Yangiliklar</a>
                                     </li>
-                                    <li><a href="course-grid.php">Smartfonlar</a>
+                                    <li><a href="telafon-brends.php">Smartfonlar</a>
                                         <ul class="sub-menu">
-                                            <li><a href="course-details.php">Apple</a></li>
-                                            <li><a href="course-details.php">Samsung</a></li>
-                                            <li><a href="course-grid.php">Huawei</a></li>
-                                            <li><a href="course-list.php">Oppo</a></li>
-                                            <li><a href="course-details.php">Nokia</a></li>
-                                            <li><a href="course-details.php">Redmi</a></li>
-                                            <li><a href="course-details.php">Vivo</a></li>
+                                            <li><a href="telafon-brends.php">Apple</a></li>
+                                            <li><a href="telafon-brends.php">Samsung</a></li>
+                                            <li><a href="telafon-brends.php">Huawei</a></li>
+                                            <li><a href="telafon-brends.php">Oppo</a></li>
+                                            <li><a href="telafon-brends.php">Nokia</a></li>
+                                            <li><a href="telafon-brends.php">Redmi</a></li>
+                                            <li><a href="telafon-brends.php">Vivo</a></li>
                                             
                                         </ul>
                                     </li>
-                                    <li><a href="blog.php">Blog</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="blog.php">Blog</a></li>
-                                            <li><a href="blog-list.php">Blog List</a></li>
-                                            <li><a href="blog-details.php">Blog Details</a></li>
-                                        </ul>
+                                    <li><a href="blog.php">Barcha telafonlar</a>
                                     </li>
                                     <li><a href="contact.php">Contact</a></li>
                                 </ul>
