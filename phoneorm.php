@@ -4,7 +4,7 @@
         private $host = 'localhost';
         private $login = 'root';
         private $parol = '';
-        private $db_name = 'cofeeshops';
+        private $db_name = 'phone_project';
         private $link ;
         public $ret = [];
 
@@ -14,6 +14,7 @@
                 exit("Baza bilan bog'lanmadi");
             }
         }
+
         public function query($query){
             return mysqli_query($this->link, $query);
         }
@@ -150,5 +151,4 @@
     }
     
 
-    $db = new Smarphone()
 ?>

@@ -16,37 +16,24 @@
 <body>
 
     <div class="main-wrapper">
-        <!-- Preloader start -->
         <div id="preloader">
             <div class="preloader">
                 <span></span>
                 <span></span>
             </div>
         </div>
-        <!-- Preloader End -->
-
-        <!-- Header Start  -->
         <?php include_once 'main.php' ?>
-        <!-- Header End -->
-
-
-        <!-- Page Banner Start -->
         <div class="section page-banner-section" style="background-image: url(assets/images/bg/page-banner.jpg);">
         <div class="section login-register-section section-padding">
             <div class="container">
-
-                <!-- Login & Register Wrapper Start -->
                 <div class="login-register-wrap">
                     <div class="row gx-5">
                         <div class="col-lg-7">
-
-                            <!-- Login & Register Box Start -->
                             <div class="login-register-box">
                                 <!-- Section Title Start -->
                                 <div class="section-title">
                                     <h2 class="title">Register</h2>
                                 </div>
-                                <!-- Section Title End -->
                                 <div class="login-register-form">
                                     <form action="addcilent.php" method="POST" id = 'regform'>
                                         <div class="single-form">
@@ -59,6 +46,15 @@
                                             <input type="text" name="login" class="form-control" placeholder="Enter your username" id = "lgn" required>
                                             <p id="helpblock" style="color:red; font-size: 14px; display: none; padding:none;"></p>
                                         </div>
+                                        <div class="single-from">
+                                            <select name="user" class="form-control">
+                                                <option >Siz kim bo'lib dasturdan foydalanmoqchisiz?</option>
+                                                <option name="admin">Admin</option>
+                                                <option name="sotuv">Sotuvchi</option>
+                                                <option name="cilent">Foydalanuvchi</option>
+                                                <option name="servis">Servis</option>
+                                            </select>
+                                        </div>
                                         <div class="single-form">
                                             <input type="email" name="email" class="form-control" placeholder="Enter your email " id='gmail' required>
                                         </div>
@@ -70,7 +66,7 @@
                                             <p id='mesg' style="font-size:14px; color:red;"></p>
                                         </div>
                                         <div class="form-btn">
-                                            <button type="submit" class="btn" onclick='o_tish()'>Register</button>
+                                            <button type="submit" class="btn">Register</button>
                                             <div class="signup">
                                                 <span class="signup">Already have an account?
                                                 <a href="login.php">Login</a>
@@ -80,12 +76,9 @@
                                     </form>
                                 </div>
                             </div>
-                            <!-- Login & Register Box End -->
-
                         </div>
                     </div>
                 </div>
-                <!-- Login & Register Wrapper End -->
             </div>
         </div>
         </div>
@@ -143,6 +136,9 @@
                         let obj =jQuery.parseJSON(data);
                         if (obj.xatolik==0){
                             swal("Good job!", obj.xabar, "success");
+                            setTimeout(function(){
+                                window.location.href = obj.data;
+                            }, 2500);
                         }else{
                             swal("Xatolik!", obj.xabar, "error");
                         }
@@ -151,11 +147,6 @@
                         alert('Xatolik yuz berdi');
                     }
                 });
-                function o_tish() {
-                    let manzil = "index.php";                            
-                    window.location.href = manzil;
-                }
-                o_tish();
             })
 
         </script>

@@ -3,15 +3,16 @@
     // if(isset($_SESSION['rol'])){
     //     header("Location: ".$_SESSION['rol']."/");
     // }else{
-    //     header("Location: login.php");
+    //     header("Location: ../login.php");
     // }
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
     <?php 
-        include_once 'config.php';
-        include_once 'head.php' ;
+        include_once '../config.php';
+        include_once '../includes/head.php' ;
+        
     ?>
 </head>
 <body>
@@ -24,22 +25,22 @@
             </div>
         </div>
 
-        <?php include_once "main.php";?>
+        <?php include_once "../includes/main.php";?>
 
 
         <div class="offcanvas offcanvas-start" id="offcanvasMenu">
-            <?php include_once 'offcanvas-body.php' ?>
+            <?php include_once '../includes/offcanvas-body.php' ?>
         </div>
 
 
         <!-- Hero Start -->
         <div class="upstudy-hero-section section" style="background-image: url(assets/images/bg/hero-bg.jpg);">
             <div class="shape-3">
-                <img src="assets/images/shape/shape-1.png" alt="">
+                <img src="../assets/images/shape/shape-1.png" alt="">
             </div>
             <div class="shape-4"></div>
             <div class="shape-5">
-                <img src="assets/images/shape/hero-shape2.png" alt="">
+                <img src="../assets/images/shape/hero-shape2.png" alt="">
             </div>
             <div class="svg-shape">
                 <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 390">
@@ -51,7 +52,7 @@
                     <div class="col-lg-6">
                         <!-- Hero Content Start -->
                         <div class="hero-content">
-                            <p class="text" data-aos="fade-up" data-aos-delay="800"><img src="assets/images/energy.png" alt="">2 000 ++ dan ortiq eng yaxshi telefonlarni xarid qiling</p>
+                            <p class="text" data-aos="fade-up" data-aos-delay="800"><img src="../assets/images/energy.png" alt="">2 000 ++ dan ortiq eng yaxshi telefonlarni xarid qiling</p>
                             <h1  data-aos="fade-up" data-aos-delay="700">Telefon sotib olmoqchi bo'lganlar uchun eng yaxshi sayt</h1>
                             <div class="hero-btn" data-aos="fade-up" data-aos-delay="900">
                                 <a class="btn" href="login-register.php">Xarid qilish</a>
@@ -63,13 +64,13 @@
                     <div class="col-lg-6">
                         <!-- Hero Images Start -->
                         <div class="hero-images">
-                            <img class="shape-1" src="assets/images/shape/hero-shape1.png" alt="">
+                            <img class="shape-1" src="../assets/images/shape/hero-shape1.png" alt="">
                             <div class="shape-2"></div>
                             <div class="shape-6">
-                                <img src="assets/images/shape/shape-7.png" alt="">
+                                <img src="../assets/images/shape/shape-7.png" alt="">
                             </div>
                             <div class="image">
-                                <img src="assets/images/devoloper.jpg" alt="">
+                                <img src="../assets/images/devoloper.jpg" alt="">
                                 
                             </div>
                         </div>
@@ -96,7 +97,7 @@
                                 <!-- Category Item Start -->
                                 <a href="course-grid.php" class="category-item">
                                     <div class="category-icon">
-                                        <img src="assets/images/cat-icon1.png" alt="">
+                                        <img src="../assets/images/cat-icon1.png" alt="">
                                     </div>
                                     <div class="category-content">
                                         <h3 class="title">Apple</h3>
@@ -108,7 +109,7 @@
                                 <!-- Category Item Start -->
                                 <a href="course-grid.php" class="category-item color-2">
                                     <div class="category-icon">
-                                        <img src="assets/images/cat-icon2.png" alt="">
+                                        <img src="../assets/images/cat-icon2.png" alt="">
                                     </div>
                                     <div class="category-content">
                                         <h3 class="title">Huawei</h3>
@@ -120,7 +121,7 @@
                                 <!-- Category Item Start -->
                                 <a href="course-grid.php" class="category-item color-3">
                                     <div class="category-icon">
-                                        <img src="assets/images/cat-icon3.png" alt="">
+                                        <img src="../assets/images/cat-icon3.png" alt="">
                                     </div>
                                     <div class="category-content">
                                         <h3 class="title">Nokia</h3>
@@ -144,7 +145,7 @@
                                 <!-- Category Item Start -->
                                 <a href="course-grid.php" class="category-item color-4">
                                     <div class="category-icon">
-                                        <img src="assets/images/cat-icon5.png" alt="">
+                                        <img src="../assets/images/cat-icon5.png" alt="">
                                     </div>
                                     <div class="category-content">
                                         <h3 class="title">Redmi</h3>
@@ -156,7 +157,7 @@
                                 <!-- Category Item Start -->
                                 <a href="course-grid.php" class="category-item">
                                     <div class="category-icon">
-                                        <img src="assets/images/cat-icon6.png" alt="">
+                                        <img src="../assets/images/cat-icon6.png" alt="">
                                     </div>
                                     <div class="category-content">
                                         <h3 class="title">Samsung</h3>
@@ -168,7 +169,7 @@
                                 <!-- Category Item Start -->
                                 <a href="course-grid.php" class="category-item color-2">
                                     <div class="category-icon">
-                                        <img src="assets/images/cat-icon7.png" alt="">
+                                        <img src="../assets/images/cat-icon7.png" alt="">
                                     </div>
                                     <div class="category-content">
                                         <h3 class="title">Vivo</h3>
@@ -221,11 +222,7 @@
                                                 <h5>📱 <?=$fetch['name']?></h5>
                                                 <h5>🎨 <?=$fetch['color']?></h5>
                                                 <h5>💾 <?=$fetch['RAM']?> / <?=$fetch['memory']?></h5>
-                                                <div>
-                                                    <button type="button" class="btn btn-lg btn-warning " style="background-color: #d9a630; margin: 6px; 0"><a style="text-decoration: none;color:white" href="phone-update.php?id=<?=$fetch['id']?>">Update</a></button> 
-                                                    <button type="button" class="btn btn-lg btn-danger " style="background-color: #de221f; margin: 6px 0;" id='delete' ><a style="text-decoration: none;color:white" href="delete.php?id=<?=$fetch['id']?>" onclick='o_tish()'>Delete</a></button>
-                                                </div>
-                                                
+                                               
                                                 <div class="courses-meta">
                                                     <p class="author-name"><span>By</span> Xakimov Allamurod</p>
                                                     <div class="rating">
@@ -242,41 +239,7 @@
                                     <?php
                                         }
                                     ?>
-                                    <div class="col-lg-3 col-sm-6">
-                                        <!-- Single Courses Start -->
-                                        <div class="single-course">
-                                            <div class="courses-image">
-                                                <img style="height: 300px;" src="assets/images/iphone.webp" alt="Courses">
-                                            </div>
-                                            <div class="courses-content">
-                                                <div class="top-meta">
-                                                    <div class="tag-time">
-                                                        <a class="tag" href="#">Company</a>
-                                                        <p class="time"><i class="far fa-clock"></i> 2h 30m</p>
-                                                    </div>
-                                                    <span class="price">
-                                                    <span class="sale-price">Price $</span>
-                                                    </span>
-                                                </div>
-                                                <h5>📱 Telafon name</h5>
-                                                <h5>🎨 Telafon rang</h5>
-                                                <h5>💾 RAM / ROM</h5>
-                                                <div>
-                                                    <button style="display: block; width:100%; background-color:#06b823; margin-top: 6px" class='btn btn-primary'><a style="text-decoration: none;color:white" href="phone-insert.php">+ INSERT</a></button>
-                                                </div>
-                                                <div class="courses-meta">
-                                                    <p class="author-name"><span>By</span> Xakimov Allamurod</p>
-                                                    <div class="rating">
-                                                        <div class="rating-star">
-                                                            <div class="rating-active" style="width: 60%;"></div>
-                                                        </div>
-                                                        <span>(4.5)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Courses End -->
-                                    </div>
+                                    
                                 </div>
                             </div>
                             
@@ -301,57 +264,12 @@
         <!-- Blog End -->
 
        
-        <?php include_once "footer.php" ?>
+        <?php include_once "../includes/footer.php" ?>
     </div>
     
-    <script src="../js/jquery-3.6.0.min.js"></script>
-    <script src="../js/sweetalert.min.js"></script>
-    <script type="text/javascript">
-        
-        $('#delete').click(function () {
-            let id = $(this).attr("id");
-            swal({
-                title: "Ishonchingiz komilmi?",
-                text: "O'chirilgandan so'ng tiklab bo'lmaydi",
-                icon: "warning",
-                buttons:{
-                    cancel:"Yo'q!",
-                    confirm: {
-                        text: "Ha, roziman!",
-                        value: true,
-                    },
-                },
-            })
-            .then((willDelete)=>{
-                if (willDelete){
-                    $.ajax({
-                        url:"delete.php",
-                        type:"GET",
-                        data:{
-                            id:id,
-                        },
-                        success:function(data){
-                            let obj = jQuery.parseJSON(data);
-                            console.log(obj);
-                            if (obj.xatolik == 0){
-                                $('#t'+id).remove();
-                                swal("O'chirildi!", obj.xabar, "success");
-                                
-                            }
-                            else{
-                                swal("Xatolik!", obj.xabar, "error");
-                            }
-                        },
-                        error:function(xhr){
-                            alert("Kechirasiz, internetdan uzilish ro'y berdi. Iltimos tekshirib qaytadan urining");
-                        },
-                    });
-                }else{
-                    swal("Bekor qilindi!");
-                }
-            });
-        });
-    </script>
-    <?php include_once 'script.php';?>
+    <?php 
+        include_once '../includes/script.php';
+    ?>
+
 </body>
 </html>

@@ -14,7 +14,7 @@
                         <div class="header-logo-menu">
                             <!--  Header Logo Start  -->
                             <div class="header-logo">
-                                <a href="index.php"><img style="width: 160px; margin-left: 20px;" src="assets/images/logotip1.jpg" alt="logo"></a>
+                                <a href="index.php"><img style="width: 160px; margin-left: 20px;" src="../assets/images/logotip1.jpg" alt="logo"></a>
                             </div>
                             <!--  Header Logo End  -->
                             <!--  Header Menu Start  -->

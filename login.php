@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(isset($_SESSION['rol'])){
+        header("Location: ".$_SESSION['rol']."/");
+    }
+?>
+
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
@@ -43,8 +50,6 @@
                                 <div class="section-title">
                                     <h2 class="title">Login</h2>
                                 </div>
-                                <!-- Section Title End -->
-
                                 <div class="login-register-form">
                                     <form action="isusername.php" method="POST" id = 'logform'>
                                         <div class="single-form">
@@ -54,7 +59,7 @@
                                             <input type="password" name='password' class="form-control"  placeholder="Your password" id = 'pass'>
                                         </div>
                                         <div class="form-btn">
-                                            <button type="submit" class="btn" onclick='o_tish()'>Login</button>
+                                            <button type="submit" class="btn">Login</button>
                                             <div class="signup">
                                                 <span class="signup">Already have an account?
                                                 <a href="register.php">Register</a>
@@ -65,13 +70,10 @@
                                     </form>
                                 </div>
                             </div>
-                            <!-- Login & Register Box End -->
-
                         </div>
                         
                     </div>
                 </div>
-                <!-- Login & Register Wrapper End -->
             </div>
         </div>
         </div>
@@ -90,11 +92,9 @@
                         // console.log(obj);
                         if (obj.xatolik == 0){
                             swal("Good job!", obj.xabar, "success");
-                            function o_tish() {
-                            let manzil = "index.php";                            
-                            window.location.href = manzil;
-                            }
-                            o_tish();
+                            setTimeout(function(){
+                                window.location.href = obj.data;
+                            }, 2500);
                         }
                         else{
                             $('#pass').val('');
@@ -109,14 +109,9 @@
                 
             })
         </script>
-
-        <!-- Footer Start -->
         <?php include_once 'footer.php' ?>
 
     </div>
-
-    <!-- JS
-    ============================================ -->
     <?php include_once 'script.php'?>
 </body>
 </html>

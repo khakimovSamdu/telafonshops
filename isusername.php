@@ -8,10 +8,10 @@
     $fetch = mysqli_fetch_assoc($sql);
     $ret = [];
     if ($fetch){
-        $ret += ['xatolik'=>0, 'xabar'=>'Siz tizimga muvaffaqiyatli kirdingiz!'];
+        $ret += ['xatolik'=>0, 'xabar'=>'Siz tizimga muvaffaqiyatli kirdingiz!', 'data'=>$rol];
     }
     else{
-        $ret += ['xatolik'=>1, 'xabar'=>'Login yoki parol xato!'];
+        $ret += ['xatolik'=>1, 'xabar'=>'Login yoki parol xato!', 'data'=>$rol];
     }
     echo json_encode($ret);
 
