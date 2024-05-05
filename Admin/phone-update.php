@@ -1,5 +1,5 @@
 <?php
-    include_once 'config.php';
+    include_once '../config.php';
     $id = $_GET['id'];
     $query = "SELECT * FROM product WHERE id='$id';";
     $sql = mysqli_query($link, $query);
@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Telafon update</title>
-    <link rel="stylesheet" href="assets/css/update.css">
+    <link rel="stylesheet" href="../assets/css/update.css">
 </head>
 <body>
   <div class="container">
@@ -28,7 +28,7 @@
             <input type="text" name="price" placeholder="Smartphone price" value="<?=$fetch['price']?>" required>
             <input type="text" name="img_url" placeholder="Smartphone img url" value="<?=$fetch['img_url']?>" required>
             <input type="hidden" name="id" value="<?=$fetch['id']?>">
-            <button type="submit" onclick='o_tish()'>Save</button>
+            <button type="submit">Save</button>
       </form>
     </div>
   </div>
@@ -46,7 +46,10 @@
                     // console.log(obj);
                     if(obj.xatolik == 0){
                         swal("Good update!", obj.xabar, "success");
-                        
+                        setTimeout(function(){
+                            let manzil = 'index.php';
+                            window.location.href = manzil;
+                        }, 2500);
                     }
                     else{
                         swal("Update error!", obj.xabar, "error");
@@ -56,11 +59,7 @@
                     alert("Serverda xatolik yuz berdi qaytadan urinib ko'ring");
                 }
             });
-            function o_tish() {
-                let manzil = "index.php";                            
-                window.location.href = manzil;
-            }
-            o_tish();
+            
         })
     </script>
 

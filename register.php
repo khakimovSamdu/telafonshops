@@ -46,15 +46,6 @@
                                             <input type="text" name="login" class="form-control" placeholder="Enter your username" id = "lgn" required>
                                             <p id="helpblock" style="color:red; font-size: 14px; display: none; padding:none;"></p>
                                         </div>
-                                        <div class="single-from">
-                                            <select name="user" class="form-control">
-                                                <option >Siz kim bo'lib dasturdan foydalanmoqchisiz?</option>
-                                                <option name="admin">Admin</option>
-                                                <option name="sotuv">Sotuvchi</option>
-                                                <option name="cilent">Foydalanuvchi</option>
-                                                <option name="servis">Servis</option>
-                                            </select>
-                                        </div>
                                         <div class="single-form">
                                             <input type="email" name="email" class="form-control" placeholder="Enter your email " id='gmail' required>
                                         </div>
@@ -97,7 +88,7 @@
                     },
                     success:function(data){
                         let obj = jQuery.parseJSON(data);
-                        // console.log(obj);
+                        console.log(obj);
                         if (obj.xatolik != 0){
                             $('#helpblock').css('display', 'block');
                             $("#helpblock").html(obj.xabar);

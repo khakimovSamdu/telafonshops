@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Telafon qo'shish</title>
-    <link rel="stylesheet" href="assets/css/update.css">
+    <link rel="stylesheet" href="../assets/css/update.css">
 </head>
 <body>
   <div class="container">
@@ -18,8 +18,8 @@
             <input type="text" name="ram" placeholder="Smartphone RAM"  required>
             <input type="text" name="memory" placeholder="Smartphone memory" required>
             <input type="text" name="price" placeholder="Smartphone price" required>
-            <input type="file" name="img_url" placeholder="Smartphone img url" required>
-            <button type="submit" onclick='o_tish()'>Insert</button>
+            <input type="text" name="img_url" placeholder="Smartphone img url" required>
+            <button type="submit">Insert</button>
       </form>
     </div>
   </div>
@@ -37,6 +37,9 @@
                     console.log(obj);
                     if(obj.xatolik == 0){
                         swal('Good insert!', obj.xabar, 'success');
+                        setTimeout(function(){
+                            window.location.href='index.php';
+                        }, 2000);
                     }
                     else{
                         swal('Insert error!', obj.xabar, 'error');

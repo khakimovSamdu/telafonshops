@@ -1,5 +1,5 @@
 <?php
-    include_once 'config.php';
+    include_once '../config.php';
     $name = $_POST['name'];
     $company = $_POST['company'];
     $color = $_POST['color'];
