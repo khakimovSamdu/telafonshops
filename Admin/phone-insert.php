@@ -50,11 +50,7 @@
                     alert("Serverda xatolik yuz berdi qaytadan urinib ko'ring");
                 }
             });
-            setTimeout(function o_tish () {
-                let manzil = "index.php";                            
-                window.location.href = manzil;
-		    }, 2500);      
-            o_tish();
+            
         })
     </script>
 

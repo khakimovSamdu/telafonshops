@@ -52,7 +52,7 @@
                         <div class="row">
                             <div class="col-xl-3 col-lg-4 col-sm-6">
                                 <!-- Category Item Start -->
-                                <a href="index-2.php" class="category-item">
+                                <a href="index-2.php?name=Apple" class="category-item">
                                     <div class="category-icon">
                                         <img src="../assets/images/cat-icon1.png" alt="">
                                     </div>
@@ -64,7 +64,7 @@
                             </div>
                             <div class="col-xl-3 col-lg-4 col-sm-6">
                                 <!-- Category Item Start -->
-                                <a href="index-2.php" class="category-item color-2">
+                                <a href="index-2.php?name=Huawei" class="category-item color-2">
                                     <div class="category-icon">
                                         <img src="../assets/images/cat-icon2.png" alt="">
                                     </div>
@@ -76,7 +76,7 @@
                             </div>
                             <div class="col-xl-3 col-lg-4 col-sm-6">
                                 <!-- Category Item Start -->
-                                <a href="index-2.php" class="category-item color-3">
+                                <a href="index-2.php?name=Nokia" class="category-item color-3">
                                     <div class="category-icon">
                                         <img src="../assets/images/cat-icon3.png" alt="">
                                     </div>
@@ -88,7 +88,7 @@
                             </div>
                             <div class="col-xl-3 col-lg-4 col-sm-6">
                                 <!-- Category Item Start -->
-                                <a href="index-2.php" class="category-item color-4">
+                                <a href="index-2.php?name=Oppo" class="category-item color-4">
                                     <div class="category-icon">
                                         <img src="../assets/images/cat-icon4.png" alt="">
                                     </div>
@@ -100,7 +100,7 @@
                             </div>
                             <div class="col-xl-3 col-lg-4 col-sm-6">
                                 <!-- Category Item Start -->
-                                <a href="index-2.php" class="category-item color-4">
+                                <a href="index-2.php?name=Redmi" class="category-item color-4">
                                     <div class="category-icon">
                                         <img src="../assets/images/cat-icon5.png" alt="">
                                     </div>
@@ -112,7 +112,7 @@
                             </div>
                             <div class="col-xl-3 col-lg-4 col-sm-6">
                                 <!-- Category Item Start -->
-                                <a href="index-2.php" class="category-item">
+                                <a href="index-2.php?name=Samsung" class="category-item">
                                     <div class="category-icon">
                                         <img src="../assets/images/cat-icon6.png" alt="">
                                     </div>
@@ -124,7 +124,7 @@
                             </div>
                             <div class="col-xl-3 col-lg-4 col-sm-6">
                                 <!-- Category Item Start -->
-                                <a href="index-2.php" class="category-item color-2">
+                                <a href="index-2.php?name=Vivo" class="category-item color-2">
                                     <div class="category-icon">
                                         <img src="../assets/images/cat-icon7.png" alt="">
                                     </div>

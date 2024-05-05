@@ -52,7 +52,7 @@
                                     <?php 
                                         include_once '../config.php';
                                         $company = $_GET['name'];
-                                        $query = "SELECT * FROM product WHERE company='$company' ORDER BY id DESC;";
+                                        $query = "SELECT * FROM product WHERE company='$company' ORDER BY id DESC ;";
                                         $sql = mysqli_query($link, $query);
                                         while($fetch=mysqli_fetch_assoc($sql)){
                                     ?>
@@ -76,10 +76,8 @@
                                                 <h5>🎨 <?=$fetch['color']?></h5>
                                                 <h5>💾 <?=$fetch['RAM']?> / <?=$fetch['memory']?></h5>
                                                 <div>
-                                                    <button type="button" class="btn btn-warning " style="background-color: #03a5fc; margin: 6px 0; ">Xarid qilish</button> 
-                                                    <button type="button" class="btn  btn-danger " style="background-color: #06bf6c; margin: 6px 0;" id='delete' ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
-                                                    <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708"/>
-                                                    </svg></i></button>
+                                                    <button type="button" class="btn btn-lg btn-warning " style="background-color: #d9a630; margin: 6px; 0"><a style="text-decoration: none;color:white" href="phone-update.php?id=<?=$fetch['id']?>">Update</a></button> 
+                                                    <button type="button" class="btn btn-lg btn-danger " style="background-color: #de221f; margin: 6px 0;" id='delete' ><a style="text-decoration: none;color:white" href="delete.php?id=<?=$fetch['id']?>" onclick='o_tish()'>Delete</a></button>
                                                 </div>
                                                 <div class="courses-meta">
                                                     <p class="author-name"><span>By</span> Xakimov Allamurod</p>
@@ -119,7 +117,6 @@
                         $company = $_GET['name'];
                         $query = "SELECT * FROM product WHERE company='$company' ORDER BY id DESC LIMIT 8;";
                         $sql = mysqli_query($link, $query);
-                        
                         while($fetch=mysqli_fetch_assoc($sql)){
                     ?>
                         <div class="col-lg-3 col-sm-6">
@@ -128,6 +125,7 @@
                                 <div class="category-img">
                                     <a href="telafon-brends.php"><img style="height: 300px;" src="<?=$fetch['img_url']?>" alt=""></a>
                                 </div>
+                                
                                 <div class="category-content text-center">
                                     <h4 class="title"><a href="telafon-brends.php"><?=$fetch['name']?></a></h4>
                                 </div>
@@ -145,12 +143,58 @@
 
 
         <?php include_once '../includes/footer.php' ?>
-        <!-- back to top start -->
-
        
     </div>
 
     <?php include_once '../includes/script.php' ?>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/sweetalert.min.js"></script>
+    <script type="text/javascript">
+        $('#delete').click(function () {
+            let id = $(this).attr("id");
+            swal({
+                title: "Ishonchingiz komilmi?",
+                text: "O'chirilgandan so'ng tiklab bo'lmaydi",
+                icon: "warning",
+                buttons:{
+                    cancel:"Yo'q!",
+                    confirm: {
+                        text: "Ha, roziman!",
+                        value: true,
+                    },
+                },
+            })
+            .then((willDelete)=>{
+                if (willDelete){
+                    $.ajax({
+                        url:"delete.php",
+                        type:"GET",
+                        data:{
+                            id:id,
+                        },
+                        success:function(data){
+                            let obj = jQuery.parseJSON(data);
+                            console.log(obj);
+                            if (obj.xatolik == 0){
+                                $('#t'+id).remove();
+                                swal("O'chirildi!", obj.xabar, "success");
+                                
+                            }
+                            else{
+                                swal("Xatolik!", obj.xabar, "error");
+                            }
+                        },
+                        error:function(xhr){
+                            alert("Kechirasiz, internetdan uzilish ro'y berdi. Iltimos tekshirib qaytadan urining");
+                        },
+                    });
+                }else{
+                    swal("Bekor qilindi!");
+                }
+            });
+        });
+    </script>
+
 
 </body>
 </html>
