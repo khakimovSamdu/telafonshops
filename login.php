@@ -1,8 +1,8 @@
 <?php
-    session_start();
-    if(isset($_SESSION['rol'])){
-        header("Location: ".$_SESSION['rol']."/");
-    }
+    // session_start();
+    // if(isset($_SESSION['rol'])){
+    //     header("Location: ".$_SESSION['rol']."/");
+    // }
 ?>
 
 <!doctype html>
@@ -28,25 +28,17 @@
                 <span></span>
             </div>
         </div>
-        <!-- Preloader End -->
 
-        <!-- Header Start  -->
         <?php include_once 'main.php' ?>
-        <!-- Header End -->
 
-
-        <!-- Page Banner Start -->
         <div class="section page-banner-section" style="background-image: url(assets/images/bg/page-banner.jpg);">
         <div class="section login-register-section section-padding">
             <div class="container">
 
-                <!-- Login & Register Wrapper Start -->
-                <div class="login-register-wrap">
+            <div class="login-register-wrap">
                     <div class="row gx-5">
                         <div class="col-lg-7">
-                            <!-- Login & Register Box Start -->
                             <div class="login-register-box">
-                                <!-- Section Title Start -->
                                 <div class="section-title">
                                     <h2 class="title">Login</h2>
                                 </div>

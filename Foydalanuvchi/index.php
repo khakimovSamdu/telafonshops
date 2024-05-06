@@ -1,10 +1,9 @@
 <?php
-    // session_start();
-    // if(isset($_SESSION['rol'])){
-    //     header("Location: ".$_SESSION['rol']."/");
-    // }else{
-    //     header("Location: ../login.php");
-    // }
+    session_start();
+    if(!isset($_SESSION['rol'])){
+        header("Location: ../login.php");
+        exit;
+    }
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -142,10 +141,8 @@
         </div>
         <!-- Category End -->
 
-        <!-- Courses Start -->
         <div class="section section-padding">
             <div class="container">
-                <!-- Courses Wrapper Start -->
                 <div class="courses-wrapper">
 
                     <!-- Courses Tab Start -->

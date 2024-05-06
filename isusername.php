@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include_once 'config.php';
 
     $user = $_POST['username'];
@@ -9,6 +10,8 @@
     $rol = $fetch['rol'];
     $ret = [];
     if ($fetch){
+        $_SESSION['rol'] = $fetch['rol'];
+        $_SESSION['login'] = $fetch['username'];
         $ret += ['xatolik'=>0, 'xabar'=>'Siz tizimga muvaffaqiyatli kirdingiz!', 'data'=>$rol, 'username'=>$user];
     }
     else{
