@@ -181,7 +181,7 @@
                                                 <h5>💾 <?=$fetch['RAM']?> / <?=$fetch['memory']?></h5>
                                                 <div>
                                                     <button type="button" class="btn btn-lg btn-warning " style="background-color: #d9a630; margin: 6px; 0"><a style="text-decoration: none;color:white" href="phone-update.php?id=<?=$fetch['id']?>">Update</a></button> 
-                                                    <button type="button" class="btn btn-lg btn-danger " style="background-color: #de221f; margin: 6px 0;" id='delete' ><a style="text-decoration: none;color:white" href="delete.php?id=<?=$fetch['id']?>" onclick='o_tish()'>Delete</a></button>
+                                                    <button type="button" class="btn btn-lg btn-danger delete" style="background-color: #de221f; margin: 6px 0;"  phone_id='<?=$fetch['id']?>' >Delete</button>
                                                 </div>
                                                 <div class="courses-meta">
                                                     <p class="author-name"><span>By</span> Xakimov Allamurod</p>
@@ -258,8 +258,8 @@
     <script src="../js/sweetalert.min.js"></script>
     <script type="text/javascript">
         
-        $('#delete').click(function () {
-            let id = $(this).attr("id");
+        $('.delete').click(function () {
+            let id = $(this).attr("phone_id");
             swal({
                 title: "Ishonchingiz komilmi?",
                 text: "O'chirilgandan so'ng tiklab bo'lmaydi",

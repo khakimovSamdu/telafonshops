@@ -2,7 +2,7 @@
             <div class="header-top-section">
                 <div class="container">
                     <div class="header-top-wrap">
-                        <div class="header-top-content text-center">
+                        <div class="header-top-content text-center delete">
                             <p>Samarqand shahar <span>Telafon dokoni</span></p>
                         </div>
                     </div>

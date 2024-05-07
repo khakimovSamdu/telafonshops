@@ -1,5 +1,7 @@
 <?php
     include_once 'config.php';
+    session_start();
+
     $firstname = $_POST['ism'];
     $lastname = $_POST['fam'];
     $login = $_POST['login'];
@@ -14,6 +16,7 @@
     $surov = mysqli_query($link, $tanlash);
     $fetch = mysqli_fetch_assoc($surov);
     if ($sql){
+        $_SESSION['rol'] = $fetch['rol'];
         $rol = $fetch['rol'];
         $ret += ['xatolik'=>0, 'xabar'=>"Muvaffaqiyatli ro'yxatdan o'tdingiz", 'data'=>$rol];
     }
