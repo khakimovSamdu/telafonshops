@@ -14,14 +14,12 @@
     $surov = mysqli_query($link, $tanlash);
     $fetch = mysqli_fetch_assoc($surov);
     if ($sql){
-
         $rol = $fetch['rol'];
         $ret += ['xatolik'=>0, 'xabar'=>"Muvaffaqiyatli ro'yxatdan o'tdingiz", 'data'=>$rol];
     }
     else{
-        $ret += ['xatolik'=>1, 'xabar'=>'Ro\'yxatdan o\'taolmadingiz', 'data'=>$rol];
+        $ret += ['xatolik'=>1, 'xabar'=>'Ro\'yxatdan o\'taolmadingiz'];
     }
-    
     
     mysqli_close($link);
     echo json_encode($ret);

@@ -6,15 +6,16 @@
     $ret = [];
     if ($sql){
         $ret += ['xatolik'=>0, 'xabar'=>"Muvaffaqqiyatli o'chirildi"];
+        header("Location: index.php");
     }else{
         $ret += ['xatolik' => 1, "xabar" => "Xatolik. O'chirilmadi"];
     }
-    json_encode($ret);
+    echo json_encode($ret);
 ?>
-<script>
+<!-- <script>
     function o_tish() {
             let manzil = "index.php";                           
             window.location.href = manzil;
         }
     o_tish();
-</script>
+</script> -->

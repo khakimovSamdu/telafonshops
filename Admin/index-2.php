@@ -34,13 +34,14 @@
                     </div>
                     <div class="tab-menu">
                         <ul class="nav justify-content-center justify-content-lg-start">
-                            <li><button class="active" data-bs-toggle="tab" data-bs-target="#tab1">Apple</button></li>
-                            <li><button data-bs-toggle="tab" data-bs-target="#tab2">Huawei</button></li>
-                            <li><button data-bs-toggle="tab" data-bs-target="#tab3">Nokia</button></li>
-                            <li><button data-bs-toggle="tab" data-bs-target="#tab4">Oppo</button></li>
-                            <li><button data-bs-toggle="tab" data-bs-target="#tab5">Redmi</button></li>
-                            <li><button data-bs-toggle="tab" data-bs-target="#tab6">Samsung</button></li>
-                            <li><button data-bs-toggle="tab" data-bs-target="#tab7">Vivo</button></li>
+                            <li><button class="active" data-bs-toggle="tab" data-bs-target="#tab1"><a href="index-2.php?name=Apple">Apple</a></button></li>
+                            <li><button data-bs-toggle="tab" data-bs-target="#tab2"><a href="index-2.php?name=Huawei">Huawei</a></button></li>
+                            <li><button data-bs-toggle="tab" data-bs-target="#tab3"><a href="index-2.php?name=Nokia">Nokia</a></button></li>
+                            <li><button data-bs-toggle="tab" data-bs-target="#tab4"><a href="index-2.php?name=Oppo">Oppo</a></button></li>
+                            <li><button data-bs-toggle="tab" data-bs-target="#tab5"><a href="index-2.php?name=Redmi">Redmi</a></button></li>
+                            <li><button data-bs-toggle="tab" data-bs-target="#tab6"><a href="index-2.php?name=Samsung">Samsung</a></button></li>
+                            <li><button data-bs-toggle="tab" data-bs-target="#tab7"><a href="index-2.php?name=Vivo">Vivo</a></button></li>
+                            <li><button data-bs-toggle="tab" data-bs-target="#tab8"><a href="index.php">Home</a></button></li>
                         </ul>
                     </div>
                 </div>

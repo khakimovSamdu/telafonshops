@@ -23,23 +23,23 @@
                                     <li class="active-menu">
                                         <a href="index.php">Bosh sahifa</a>
                                     </li>
-                                    <li><a href="index-2.php">Yangiliklar</a>
+                                    <li><a href="telafon-brends.php">Yangiliklar</a>
                                     </li>
-                                    <li><a href="telafon-brends.php">Smartfonlar</a>
+                                    <li>Smartfonlar
                                         <ul class="sub-menu">
-                                            <li><a href="telafon-brends.php">Apple</a></li>
-                                            <li><a href="telafon-brends.php">Samsung</a></li>
-                                            <li><a href="telafon-brends.php">Huawei</a></li>
-                                            <li><a href="telafon-brends.php">Oppo</a></li>
-                                            <li><a href="telafon-brends.php">Nokia</a></li>
-                                            <li><a href="telafon-brends.php">Redmi</a></li>
-                                            <li><a href="telafon-brends.php">Vivo</a></li>
+                                            <li><a href="index-2.php?name=Apple">Apple</a></li>
+                                            <li><a href="index-2.php?name=Samsung">Samsung</a></li>
+                                            <li><a href="index-2.php?name=Huawei">Huawei</a></li>
+                                            <li><a href="index-2.php?name=Oppo">Oppo</a></li>
+                                            <li><a href="index-2.php?name=Nokia">Nokia</a></li>
+                                            <li><a href="index-2.php?name=Redmi">Redmi</a></li>
+                                            <li><a href="index-2.php?name=Vivo">Vivo</a></li>
                                             
                                         </ul>
                                     </li>
-                                    <li><a href="blog.php">Barcha telafonlar</a>
+                                    <li><a href="../blog.php">Barcha telafonlar</a>
                                     </li>
-                                    <li><a href="contact.php">Contact</a></li>
+                                    <li><a href="../contact.php">Contact</a></li>
                                 </ul>
                             </div>
                             <!--  Header Menu End  -->
