@@ -122,7 +122,7 @@
         }
 
 
-        
+           
     }
     $db = new Smartphones();
     $arr = ['company'=>'Apple'];

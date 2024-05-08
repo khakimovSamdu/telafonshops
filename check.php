@@ -7,5 +7,5 @@
     }
     include_once 'phoneorm.php';
     $db = new Smartphone();
-    
+         
 ?>
