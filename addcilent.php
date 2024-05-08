@@ -17,6 +17,7 @@
     $fetch = mysqli_fetch_assoc($surov);
     if ($sql){
         $_SESSION['rol'] = $fetch['rol'];
+        $_SESSION['login'] = $fetch['username'];
         $rol = $fetch['rol'];
         $ret += ['xatolik'=>0, 'xabar'=>"Muvaffaqiyatli ro'yxatdan o'tdingiz", 'data'=>$rol];
     }
