@@ -36,7 +36,7 @@
         <div style="height: 150px;">
             
         </div>
-        
+          
         <div class="section section-padding">
             <div class="container">
                 <div class="course-list-wrapper">
