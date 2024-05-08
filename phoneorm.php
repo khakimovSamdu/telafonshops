@@ -1,154 +1,132 @@
 <?php
-
-    class Smartphone{
+    class Smartphones
+    {
         private $host = 'localhost';
-        private $login = 'root';
+        private $username = 'root';
         private $parol = '';
         private $db_name = 'phone_project';
-        private $link ;
-        public $ret = [];
+        private $link;
 
         function __construct(){
-            $this->link = mysqli_connect($this->host, $this->login, $this->parol, $this->db_name);
+            $this-> link = mysqli_connect($this->host, $this->username, $this->parol, $this->db_name);
             if(!($this->link)){
-                exit("Baza bilan bog'lanmadi");
+                exit("Bazaga ulanmadi!");
             }
         }
 
         public function query($query){
             return mysqli_query($this->link, $query);
         }
-        public function gettelafon($table, $arr, $con= 'no'){
-            if ($con=="no"){
-                $sql = "SELECT * FROM "."$table"." WHERE ";
-                $f = "";
-                $i = 0;
-                $n = count($arr);
-                foreach($arr as $key => $val){
-                    $i++;
-                    if($i==$n){
-                        $f .= "$key = '$val'";
-                    }else{
-                        $f .= "$key = '$val' AND ";
-                    }
+
+        public function get_brend($table, $arr, $con = 'no'){
+
+            $sql = "SELECT * FROM ".$table. " WHERE ";
+            $t = '';
+            $i=0;
+            $n = count($arr);
+            foreach($arr as $key=>$val){
+                $i++;
+                if($i==$n){
+                    $t .= "$key = '$val'";
+                }else{
+                    $t .= "$key = '$val' AND ";
                 }
-                $sql .= $f;
-            }else{
+            }
+            $sql .= $t;
+            if ($con != 'no'){
                 $sql .= $con;
             }
+
             $fetch = mysqli_fetch_assoc($this->query($sql));
             return $fetch;
         }
-        public function gettelafons($table, $arr, $cond='no'){
-            $sql = "SELECT * FROM ". $table." WHERE ";
-            $t = "";
-            $n = count($arr);
+
+        public function get_brends($table, $arr, $cond = 'no'){
+            $sql = "SELECT * FROM ".$table." WHERE ";
+            $t = '';
             $i = 0;
-            if($cond=='no'){
-                foreach($arr as $key=>$value){
-                    $i++;
-                    if($i==$n){
-                        $f .= "$key='$value'";
-                    }else{
-                        $f .= "$key='$value AND '";
-                    }
-    
+            $n = count($arr);
+            foreach($arr as $key=>$val){
+                $i++;
+                if($i==$n){
+                    $t .= "$key = '$val'";
+                }else{
+                    $t .= "$key = '$val' AND ";
                 }
-                $sql .= $f;
-            }else{
+            }    
+            $sql .= $t;
+            if($cond != 'no'){
                 $sql .= $cond;
             }
             $fetchs = [];
             $r = $this->query($sql);
-            while($fetch = mysqli_fetch_assoc($r)){
+            while ($fetch = mysqli_fetch_assoc($r)) {
                 array_push($fetchs, $fetch);
             }
             return $fetchs;
-
         }
-        public function telafoninsert($table, $arr){
-            $sql = "INSERT INTO ".$table." ";
-            $t1 = "";
-            $t2 = "";
-            $n = count($arr);
+        public function brend_delete($table, $arr, $cond = 'no'){
+            $sql = "DELETE FROM ".$table. " WHERE ";
+            $t = '';
             $i = 0;
+            $n = count($arr);
+            foreach($arr as $key=>$val){
+                $i++;
+                if($i==$n){
+                    $t .= "$key = '$val'";
+                }else{
+                    $t .= "$key = '$val' AND ";
+                }
+            }
+            $sql .= $t;
+            if($cond!='no'){
+                $sql .= $cond;
+            }
+            return $this->query($sql);
+        }
+        public function brend_insert($table, $arr){
+            $sql = "INSERT INTO ".$table. " ";
+            $t1 = '';
+            $t2 = '';
+            $i = 0;
+            $n = count($arr);
             foreach($arr as $key=>$val){
                 $i++;
                 if($i==$n){
                     $t1 .= $key;
                     $t2 .= "'".$val."'";
                 }else{
-                    $t1 .= $key;
-                    $t2 .= "'".$val."',";
+                    $t1 .= $key.', ';
+                    $t2 .= "'".$val."', ";
                 }
             }
-            $sql .= "($t1) VALUES ($t2)";
-            return $this->query($sql);
+            $sql .= "($t1) VALUES ($t2);";
+            return $this -> query($sql);
         }
-        public function telafonupdate($table, $data, $arr, $cond="no"){
-            $sql = "UPDATE ". $table." SET ";
-            $f = "";
-            $n = count($data);
+        public function telafon_update($table, $arr, $cond='no'){
+            $sql = "UPDATE ".$table. " SET ";
+            $t = '';
             $i = 0;
-            foreach($data as $key=>$val){
+            $n = count($arr);
+            foreach($arr as $key=>$val){
                 $i++;
                 if($n==$i){
-                    $f .= "$key = '$val'";
+                    $t .= "$key = '$val'";
                 }else{
-                    $f .= "$key = '$val', ";
+                    $t .= "$key = '$val', ";
                 }
-
             }
-            $sql .= $f;
-            $sql .= " WHERE ";
-            $f = "";
-            $n = count($arr);
-            $i = 0;
-            if($cond=='no'){
-                foreach($arr as $key=>$val){
-                    if($n==$i){
-                        $f .= "$key = '$val'";
-                    }else{
-                        $f .= "$key = '$val' AND ";
-                    }
-                }
-                $sql .= $f;
-            }else{
+            $sql .= $t;
+            if($cond!='no'){
                 $sql .= $cond;
             }
             return $this->query($sql);
         }
-        public function telafondelete($table, $arr, $cond="no"){
-            $sql = "DELETE FROM ". $table. " WHERE ";
-            $f = "";
-            $n = count($arr);
-            $i = 0;
-            if($cond=="no"){
-                foreach($arr as $key=>$val){
-                    if($i==$n){
-                        $f .= "$key = '$val'";
-                    }else{
-                        $f .= "$key = '$val' AND ";
-                    }
-                }
-                $sql .= $f;
-            }else{
-                $sql .= $cond;
-            }
-            return $this->query($sql);
-        }
-        public function filter($s){
-            $s = htmlspecialchars($s, ENT_QUOTES);
-            return $s;
-        }
-        public function print_json(){
-            echo json_encode($this->ret);
-        }
-        function __destruct(){
-            mysqli_close($this->link);
-        }
-        
     }
-   
 
+    $db = new Smartphones();
+    $arr = ['company'=>'Apple'];
+    print_r($db->get_brends('product', $arr, "ORDER BY price DESC LIMIT 5")) ;
+
+    
 ?>
