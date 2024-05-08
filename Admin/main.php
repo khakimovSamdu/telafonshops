@@ -57,7 +57,7 @@
                             </div>
 
                             <div class="header-login d-none d-lg-block">
-                            <a class="link" href=""><i class="far fa-user">Admin</i></a>
+                            <a class="link" href=""><i class="far fa-user"><?=$_SESSION['login']?></i></a>
                                 <a class="link" href="../loginout.php">Chiqish</a>
                             </div>
 

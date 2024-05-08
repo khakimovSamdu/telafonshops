@@ -184,7 +184,7 @@
                                                 </div>
                                                 <div>
                                                     <button class='btn btn-primery' style='margin: 7px 2px; background-color: #0388fc'>Xarid berish</button> 
-                                                    <button class='btn btn-danger'style='margin: 7px 2px; background-color: #f5c62c' >Cancel</button>          
+                                                    <button class='btn btn-danger'style='margin: 7px 2px; background-color: #f5c62c' ><a style='text-direction: none;' href="index.php">Cancel</a></button>          
                                                 </div>
                                                 
                                             </div>

@@ -59,6 +59,7 @@
                             <div class="header-login d-none d-lg-block">
                                 <a class="link" href="login.php"><i class="far fa-user"></i> Login</a>
                                 <a class="link" href="register.php">Register</a>
+                                <a class="link" href=""><?=$_SESSION['login']?></i></a>
                             </div>
 
                             <div class="header-cart dropdown">
