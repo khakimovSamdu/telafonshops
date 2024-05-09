@@ -101,7 +101,7 @@
             $sql .= "($t1) VALUES ($t2);";
             return $this -> query($sql);
         }
-        public telafon_update($table, $arr, $cond='no'){
+        public function telafon_update($table, $arr, $cond='no'){
             $sql = "UPDATE ".$table. " SET ";
             $t = '';
             $i = 0;
@@ -120,13 +120,65 @@
             }
             return $this->query($sql);
         }
+        public function teskari_tartiblash_all($table){
+            $sql = "SELECT * FROM ".$table. " ORDER BY id DESC";
+            $r = $this->query($sql);
+            $fetchs = [];
+            while($fetch = mysqli_fetch_assoc($r)){
+                array_push($fetchs, $fetch);
+            }
+            return $fetchs;
+        }
+
+        public function teskari_tartiblash($table, $arr){
+            $t = '';
+            $n = count($arr);
+            $i = 0;
+            $sql = "SELECT * FROM ".$table." WHERE ";
+            foreach($arr as $key=>$val){
+                $i++;
+                if($i==$n){
+                    $t .= "$key = '$val'";
+                }else{
+                    $t .= "$key = '$val' AND ";
+                }
+            }
+            $sql .= $t;
+            $sql .= " ORDER BY id DESC;";
+            $r = $this->query($sql);
+            $fetchs = [];
+            while($fetch = mysqli_fetch_assoc($r)){
+                array_push($fetchs, $fetch);
+            }
+            return $fetchs;
 
 
-           
+        }
+
+        public function bernd_name_all($table, $brend_name){
+            $sql = "SELECT * FROM ".$table. " WHERE company = '$brend_name'";
+            $r = $this->query($sql);
+            $fetchs = [];
+            while($fetch = mysqli_fetch_assoc($r)){
+                array_push($fetchs, $fetch);
+            }
+            return $fetchs;
+        }
+        public function get_brend_company($table){
+            $sql = "SELECT DISTINCT company FROM ".$table;
+            $r = $this->query($sql);
+            
+            $fetchs = [];
+            while($fetch = mysqli_fetch_assoc($r)){
+                array_push($fetchs, $fetch);
+            }
+            return $fetchs;
+        }
+
     }
     $db = new Smartphones();
     $arr = ['company'=>'Apple'];
-    print_r($db->get_brends('product', $arr, "ORDER BY price DESC LIMIT 5")) ;
+    print_r($db->get_brend_company('product'));
 
     
 ?>
