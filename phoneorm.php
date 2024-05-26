@@ -1,10 +1,10 @@
 <?php
 
-    class Smartphone{
+    class Talaba{
         private $host = 'localhost';
         private $login = 'root';
         private $parol = '';
-        private $db_name = 'phone_project';
+        private $db_name = 'test1';
         private $link ;
         public $ret = [];
 
@@ -18,7 +18,7 @@
         public function query($query){
             return mysqli_query($this->link, $query);
         }
-        public function gettelafon($table, $arr, $con= 'no'){
+        public function get_talaba($table, $arr, $con= 'no'){
             if ($con=="no"){
                 $sql = "SELECT * FROM "."$table"." WHERE ";
                 $f = "";
@@ -39,7 +39,7 @@
             $fetch = mysqli_fetch_assoc($this->query($sql));
             return $fetch;
         }
-        public function gettelafons($table, $arr, $cond='no'){
+        public function get_talabalar($table, $arr, $cond='no'){
             $sql = "SELECT * FROM ". $table." WHERE ";
             $t = "";
             $n = count($arr);
@@ -66,7 +66,7 @@
             return $fetchs;
 
         }
-        public function telafoninsert($table, $arr){
+        public function get_talab_insert($table, $arr){
             $sql = "INSERT INTO ".$table." ";
             $t1 = "";
             $t2 = "";
@@ -85,7 +85,7 @@
             $sql .= "($t1) VALUES ($t2)";
             return $this->query($sql);
         }
-        public function telafonupdate($table, $data, $arr, $cond="no"){
+        public function get_talaba_tahrirlash($table, $data, $arr, $cond="no"){
             $sql = "UPDATE ". $table." SET ";
             $f = "";
             $n = count($data);
@@ -118,7 +118,7 @@
             }
             return $this->query($sql);
         }
-        public function telafondelete($table, $arr, $cond="no"){
+        public function get_talaba_delete($table, $arr, $cond="no"){
             $sql = "DELETE FROM ". $table. " WHERE ";
             $f = "";
             $n = count($arr);
@@ -136,13 +136,6 @@
                 $sql .= $cond;
             }
             return $this->query($sql);
-        }
-        public function filter($s){
-            $s = htmlspecialchars($s, ENT_QUOTES);
-            return $s;
-        }
-        public function print_json(){
-            echo json_encode($this->ret);
         }
         function __destruct(){
             mysqli_close($this->link);

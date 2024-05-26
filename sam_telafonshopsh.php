@@ -176,9 +176,7 @@
         }
 
     }
-    $db = new Smartphones();
-    $arr = ['company'=>'Apple'];
-    print_r($db->get_brend_company('product'));
+    
 
     
 ?>
