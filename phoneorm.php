@@ -124,9 +124,5 @@
         }
     }
 
-    $db = new Smartphones();
-    $arr = ['company'=>'Apple'];
-    print_r($db->get_brends('product', $arr, "ORDER BY price DESC LIMIT 5")) ;
-
     
 ?>
