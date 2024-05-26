@@ -171,32 +171,6 @@
             }
             return $this->query($sql);
         }
-<<<<<<< HEAD
-        public function get_talaba_delete($table, $arr, $cond="no"){
-            $sql = "DELETE FROM ". $table. " WHERE ";
-            $f = "";
-            $n = count($arr);
-            $i = 0;
-            if($cond=="no"){
-                foreach($arr as $key=>$val){
-                    if($i==$n){
-                        $f .= "$key = '$val'";
-                    }else{
-                        $f .= "$key = '$val' AND ";
-                    }
-                }
-                $sql .= $f;
-            }else{
-                $sql .= $cond;
-            }
-            return $this->query($sql);
-        }
-        function __destruct(){
-            mysqli_close($this->link);
-        }
-        
-=======
->>>>>>> 5431c711a52d4e0942b61a1511f08f29082d49fd
     }
 
     
