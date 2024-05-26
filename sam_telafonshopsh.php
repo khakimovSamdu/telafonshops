@@ -1,12 +1,10 @@
 <?php
-    class Smartphones
-    {
+     class Smartphones{
         private $host = 'localhost';
         private $username = 'root';
         private $parol = '';
         private $db_name = 'phone_project';
         private $link;
-
         function __construct(){
             $this-> link = mysqli_connect($this->host, $this->username, $this->parol, $this->db_name);
             if(!($this->link)){
@@ -103,7 +101,7 @@
             $sql .= "($t1) VALUES ($t2);";
             return $this -> query($sql);
         }
-        public function telafon_update($table, $arr, $cond='no'){
+        public telafon_update($table, $arr, $cond='no'){
             $sql = "UPDATE ".$table. " SET ";
             $t = '';
             $i = 0;
@@ -122,8 +120,10 @@
             }
             return $this->query($sql);
         }
-    }
 
+
+           
+    }
     $db = new Smartphones();
     $arr = ['company'=>'Apple'];
     print_r($db->get_brends('product', $arr, "ORDER BY price DESC LIMIT 5")) ;
