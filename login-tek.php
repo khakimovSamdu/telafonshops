@@ -13,6 +13,6 @@
         $ret += ['xatolik'=>0, 'xabar'=>"Muvaffaqqiyatli"];
     }else{
         $ret += ['xatolik'=>1, 'xabar'=>'Bu username mavjud'];
-    }
+    } 
     echo json_encode($ret);
 ?>
