@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-    <?php include_once 'head.php' ?>
+    <?php include_once '../includes/head.php' ?>
 </head>
 <body>
     <div class="main-wrapper">
@@ -11,7 +11,7 @@
                 <span></span>
             </div>
         </div>
-        <?php include_once 'includes/main.php'?>
+        <?php include_once '../includes/main.php'?>
         
 
         <div class="section page-banner-section" style="background-image: url(assets/images/bg/page-banner.jpg);">
@@ -65,7 +65,7 @@
                     </div>
                     <div class="col-lg-8">
                         <div class="contact-form-wrap">
-                            <form action="contact-xabar-send.php" method="POST" id="messagefrom">
+                            <form action="../contact-xabar-send.php" method="POST" id="messagefrom">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="single-form">
@@ -109,7 +109,7 @@
         </div>
         <!-- Contact Map Start -->
         
-        <?php include_once 'footer.php'?>
+        <?php include_once '../includes/footer.php'?>
     </div>
     <script src="../js/jquery-3.6.0.min.js"></script>
     <script src="../js/sweetalert.min.js"></script>
@@ -117,7 +117,7 @@
         $('#messagefrom').submit(function(e){
             e.preventDefault();
             $.ajax({
-                url:"contact-xabar-send.php",
+                url:"../contact-xabar-send.php",
                 method: "POST",
                 data:$('messagefrom').serialize(),
                 success:function(data){
@@ -140,6 +140,6 @@
             });
         })
     </script>
-    <?php include_once 'script.php'?>
+    <?php include_once '../includes/script.php'?>
 </body>
 </html>

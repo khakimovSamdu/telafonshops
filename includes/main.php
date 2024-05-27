@@ -1,3 +1,4 @@
+<?php session_start()?>
 <div class="section header">
             <div class="header-top-section">
                 <div class="container">
@@ -23,7 +24,6 @@
                                     <li class="active-menu">
                                         <a href="index.php">Bosh sahifa</a>
                                     </li>
-                                    <li><a href="index-2.php">Yangiliklar</a>
                                     </li>
                                     <li><a href="telafon-brends.php">Smartfonlar</a>
                                         <ul class="sub-menu">
@@ -37,7 +37,7 @@
                                             
                                         </ul>
                                     </li>
-                                    <li><a href="blog.php">Barcha telafonlar</a>
+                                    <li><a href="blog.php">Yangiliklar</a>
                                     </li>
                                     <li><a href="contact.php">Contact</a></li>
                                 </ul>
@@ -55,16 +55,22 @@
                                     <button><i class="flaticon-loupe"></i></button>
                                 </form>
                             </div>
-
+                            <?php 
+                                if($_SESSION['login']){
+                            ?>
+                            <div class="header-login d-none d-lg-block">
+                                <a class="link" href="login.php"><i class="far fa-user"></i> <?=$_SESSION['login']?></a>
+                                <a class="link" href="loginout.php">Chiqish</a>
+                            </div>
+                            <?php
+                                }else{
+                            ?>
                             <div class="header-login d-none d-lg-block">
                                 <a class="link" href="login.php"><i class="far fa-user"></i> Login</a>
                                 <a class="link" href="register.php">Register</a>
-                                <a class="link" href="loginout.php">Chiqish</a>
                             </div>
-
-                            <div class="header-cart dropdown">
-                                
-                            </div>
+                            <?}?>
+                            
 
 
                             <div class="header-toggle d-lg-none">

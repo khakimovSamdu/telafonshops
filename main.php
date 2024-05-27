@@ -1,3 +1,4 @@
+<?php session_start()?>
 <div class="section header">
             <div class="header-top-section">
                 <div class="container">
@@ -14,7 +15,7 @@
                         <div class="header-logo-menu">
                             <!--  Header Logo Start  -->
                             <div class="header-logo">
-                                <a href="index.php"><img style="width: 160px; margin-left: 20px;" src="assets/images/logotip1.jpg" alt="logo"></a>
+                                <a href="index.php"><img style="width: 160px; margin-left: 20px;" src="../assets/images/logotip1.jpg" alt="logo"></a>
                             </div>
                             <!--  Header Logo End  -->
                             <!--  Header Menu Start  -->
@@ -23,21 +24,20 @@
                                     <li class="active-menu">
                                         <a href="index.php">Bosh sahifa</a>
                                     </li>
-                                    <li><a href="telafon-brends.php">Yangiliklar</a>
                                     </li>
-                                    <li>Smartfonlar
+                                    <li><a href="telafon-brends.php">Smartfonlar</a>
                                         <ul class="sub-menu">
-                                            <li><a href="index-2.php?name=Apple">Apple</a></li>
-                                            <li><a href="index-2.php?name=Samsung">Samsung</a></li>
-                                            <li><a href="index-2.php?name=Huawei">Huawei</a></li>
-                                            <li><a href="index-2.php?name=Oppo">Oppo</a></li>
-                                            <li><a href="index-2.php?name=Nokia">Nokia</a></li>
-                                            <li><a href="index-2.php?name=Redmi">Redmi</a></li>
-                                            <li><a href="index-2.php?name=Vivo">Vivo</a></li>
+                                            <li><a href="telafon-brends.php">Apple</a></li>
+                                            <li><a href="telafon-brends.php">Samsung</a></li>
+                                            <li><a href="telafon-brends.php">Huawei</a></li>
+                                            <li><a href="telafon-brends.php">Oppo</a></li>
+                                            <li><a href="telafon-brends.php">Nokia</a></li>
+                                            <li><a href="telafon-brends.php">Redmi</a></li>
+                                            <li><a href="telafon-brends.php">Vivo</a></li>
                                             
                                         </ul>
                                     </li>
-                                    <li><a href="blog.php">Barcha telafonlar</a>
+                                    <li><a href="blog.php">Yangiliklar</a>
                                     </li>
                                     <li><a href="contact.php">Contact</a></li>
                                 </ul>
@@ -55,16 +55,22 @@
                                     <button><i class="flaticon-loupe"></i></button>
                                 </form>
                             </div>
-
+                            <?php 
+                                if($_SESSION['login']){
+                            ?>
+                            <div class="header-login d-none d-lg-block">
+                                <a class="link" href="login.php"><i class="far fa-user"></i> <?=$_SESSION['login']?></a>
+                                <a class="link" href="loginout.php">Chiqish</a>
+                            </div>
+                            <?php
+                                }else{
+                            ?>
                             <div class="header-login d-none d-lg-block">
                                 <a class="link" href="login.php"><i class="far fa-user"></i> Login</a>
                                 <a class="link" href="register.php">Register</a>
-                                <a class="link" href=""><?=$_SESSION['login']?></i></a>
                             </div>
-
-                            <div class="header-cart dropdown">
-                                
-                            </div>
+                            <?}?>
+                            
 
 
                             <div class="header-toggle d-lg-none">

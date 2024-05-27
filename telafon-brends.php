@@ -7,26 +7,8 @@
 </head>
 <body>
     <div class="main-wrapper">
-        <div id="preloader">
-            <div class="preloader">
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        <?php
-            include_once 'main.php'
-        ?>
-        <div class="offcanvas offcanvas-start" id="offcanvasMenu">
-            <div class="offcanvas-header">
-                <div class="offcanvas-logo">
-                    <a href="index.php"><img src="assets/images/logotip1.jpg" alt=""></a>
-                </div>
-
-                <button type="button" class="close-btn" data-bs-dismiss="offcanvas"><i class="flaticon-close"></i></button>
-
-            </div>
-            <?php include_once 'offcanvas-body.php'?>
-        </div>
+        <?php include_once 'includes/main.php'?>
+       
         <div style="height: 150px;">
             
         </div>

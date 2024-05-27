@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-    <?php include_once 'includes/head.php'?>
+    <?php include_once '../includes/head.php'?>
 </head>
 <body>
     <div class="main-wrapper">
@@ -11,7 +11,7 @@
                 <span></span>
             </div>
         </div>
-        <?php include_once 'includes/main.php'?>
+        <?php include_once '../includes/main.php'?>
 
         <!-- Page Banner Start -->
         <div class="section page-banner-section" style="background-image: url(assets/images/bg/page-banner.jpg);">
@@ -22,7 +22,7 @@
 
                     <div class="row">
                         <?php
-                            include_once 'phoneorm.php';
+                            include_once '../phoneorm.php';
                             $db = new Smartphones();
                             $fetchs = $db->get_brend_company('product');
                             while($fetch = mysqli_fetch_assoc($fetchs)){
@@ -100,11 +100,11 @@
         <!-- Blog End -->
 
 
-        <?php include_once 'includes/footer.php'?>
+        <?php include_once '../includes/footer.php'?>
 
     </div>
 
-    <?php include_once 'includes/script.php'?>
+    <?php include_once '../includes/script.php'?>
 
 </body>
 </html>

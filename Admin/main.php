@@ -37,9 +37,9 @@
                                             
                                         </ul>
                                     </li>
-                                    <li><a href="../blog.php">Barcha telafonlar</a>
+                                    <li><a href="blog.php">Barcha telafonlar</a>
                                     </li>
-                                    <li><a href="../contact.php">Contact</a></li>
+                                    <li><a href="contact.php">Contact</a></li>
                                 </ul>
                             </div>
                             <!--  Header Menu End  -->

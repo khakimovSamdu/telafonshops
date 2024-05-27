@@ -1,22 +1,11 @@
 <?php
-<<<<<<< HEAD
-
-    class Talaba{
-=======
     class Smartphones
     {
->>>>>>> 5431c711a52d4e0942b61a1511f08f29082d49fd
         private $host = 'localhost';
         private $username = 'root';
         private $parol = '';
-<<<<<<< HEAD
-        private $db_name = 'test1';
-        private $link ;
-        public $ret = [];
-=======
         private $db_name = 'phone_project';
         private $link;
->>>>>>> 5431c711a52d4e0942b61a1511f08f29082d49fd
 
         function __construct(){
             $this-> link = mysqli_connect($this->host, $this->username, $this->parol, $this->db_name);
@@ -28,21 +17,6 @@
         public function query($query){
             return mysqli_query($this->link, $query);
         }
-<<<<<<< HEAD
-        public function get_talaba($table, $arr, $con= 'no'){
-            if ($con=="no"){
-                $sql = "SELECT * FROM "."$table"." WHERE ";
-                $f = "";
-                $i = 0;
-                $n = count($arr);
-                foreach($arr as $key => $val){
-                    $i++;
-                    if($i==$n){
-                        $f .= "$key = '$val'";
-                    }else{
-                        $f .= "$key = '$val' AND ";
-                    }
-=======
 
         public function get_brend($table, $arr, $con = 'no'){
 
@@ -56,7 +30,6 @@
                     $t .= "$key = '$val'";
                 }else{
                     $t .= "$key = '$val' AND ";
->>>>>>> 5431c711a52d4e0942b61a1511f08f29082d49fd
                 }
             }
             $sql .= $t;
@@ -67,17 +40,10 @@
             $fetch = mysqli_fetch_assoc($this->query($sql));
             return $fetch;
         }
-<<<<<<< HEAD
-        public function get_talabalar($table, $arr, $cond='no'){
-            $sql = "SELECT * FROM ". $table." WHERE ";
-            $t = "";
-            $n = count($arr);
-=======
 
         public function get_brends($table, $arr, $cond = 'no'){
             $sql = "SELECT * FROM ".$table." WHERE ";
             $t = '';
->>>>>>> 5431c711a52d4e0942b61a1511f08f29082d49fd
             $i = 0;
             $n = count($arr);
             foreach($arr as $key=>$val){
@@ -99,17 +65,9 @@
             }
             return $fetchs;
         }
-<<<<<<< HEAD
-        public function get_talab_insert($table, $arr){
-            $sql = "INSERT INTO ".$table." ";
-            $t1 = "";
-            $t2 = "";
-            $n = count($arr);
-=======
         public function brend_delete($table, $arr, $cond = 'no'){
             $sql = "DELETE FROM ".$table. " WHERE ";
             $t = '';
->>>>>>> 5431c711a52d4e0942b61a1511f08f29082d49fd
             $i = 0;
             $n = count($arr);
             foreach($arr as $key=>$val){
@@ -145,16 +103,9 @@
             $sql .= "($t1) VALUES ($t2);";
             return $this -> query($sql);
         }
-<<<<<<< HEAD
-        public function get_talaba_tahrirlash($table, $data, $arr, $cond="no"){
-            $sql = "UPDATE ". $table." SET ";
-            $f = "";
-            $n = count($data);
-=======
         public function telafon_update($table, $arr, $cond='no'){
             $sql = "UPDATE ".$table. " SET ";
             $t = '';
->>>>>>> 5431c711a52d4e0942b61a1511f08f29082d49fd
             $i = 0;
             $n = count($arr);
             foreach($arr as $key=>$val){
@@ -171,6 +122,54 @@
             }
             return $this->query($sql);
         }
+        public function teskari_tartiblash_all($table){
+            $sql = "SELECT * FROM ".$table. " ORDER BY id DESC";
+            $r = $this->query($sql);
+            $fetchs = [];
+            while($fetch = mysqli_fetch_assoc($r)){
+                array_push($fetchs, $fetch);
+            }
+            return $fetchs;
+        }
+
+        public function teskari_tartiblash($table, $arr){
+            $t = '';
+            $n = count($arr);
+            $i = 0;
+            $sql = "SELECT * FROM ".$table." WHERE ";
+            foreach($arr as $key=>$val){
+                $i++;
+                if($i==$n){
+                    $t .= "$key = '$val'";
+                }else{
+                    $t .= "$key = '$val' AND ";
+                }
+            }
+            $sql .= $t;
+            $sql .= " ORDER BY id DESC;";
+            $r = $this->query($sql);
+            $fetchs = [];
+            while($fetch = mysqli_fetch_assoc($r)){
+                array_push($fetchs, $fetch);
+            }
+            return $fetchs;
+
+        }
+        public function bernd_name_all($table, $brend_name){
+            $sql = "SELECT * FROM ".$table. " WHERE company = '$brend_name'";
+            $r = $this->query($sql);
+            $fetchs = [];
+            while($fetch = mysqli_fetch_assoc($r)){
+                array_push($fetchs, $fetch);
+            }
+            return $fetchs;
+        }
+        public function get_brend_company($table){
+            $sql = "SELECT DISTINCT company FROM ".$table. " WHERE company != 'Mi'";
+            $fetchs = $this->query($sql);
+            return $fetchs;
+        }
+
     }
 
     
