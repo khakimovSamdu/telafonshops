@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <div class="section header">
             <div class="header-top-section">
                 <div class="container">
@@ -23,7 +24,6 @@
                                     <li class="active-menu">
                                         <a href="index.php">Bosh sahifa</a>
                                     </li>
-                                    <li><a href="telafon-brends.php">Yangiliklar</a>
                                     </li>
                                     <li>Smartfonlar
                                         <ul class="sub-menu">
@@ -37,7 +37,7 @@
                                             
                                         </ul>
                                     </li>
-                                    <li><a href="blog.php">Barcha telafonlar</a>
+                                    <li><a href="blog.php">Yangiliklar</a>
                                     </li>
                                     <li><a href="contact.php">Contact</a></li>
                                 </ul>
@@ -56,14 +56,21 @@
                                 </form>
                             </div>
 
+                            <?php 
+                                if($_SESSION['login']){
+                            ?>
                             <div class="header-login d-none d-lg-block">
-                            <a class="link" href=""><i class="far fa-user"><?=$_SESSION['login']?></i></a>
-                                <a class="link" href="../loginout.php">Chiqish</a>
+                                <a class="link" href="login.php"><i class="far fa-user"></i> <?=$_SESSION['login']?></a>
+                                <a class="link" href="loginout.php">Chiqish</a>
                             </div>
-
-                            <div class="header-cart dropdown">
-                                
+                            <?php
+                                }else{
+                            ?>
+                            <div class="header-login d-none d-lg-block">
+                                <a class="link" href="login.php"><i class="far fa-user"></i> Login</a>
+                                <a class="link" href="register.php">Register</a>
                             </div>
+                            <?}?>
 
 
                             <div class="header-toggle d-lg-none">

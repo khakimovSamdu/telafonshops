@@ -11,7 +11,7 @@
                 <span></span>
             </div>
         </div>
-        <?php include_once '../includes/main.php'?>
+        <?php include_once 'main.php'?>
 
         <!-- Page Banner Start -->
         <div class="section page-banner-section" style="background-image: url(assets/images/bg/page-banner.jpg);">
@@ -26,7 +26,7 @@
                             $db = new Smartphones();
                             $fetchs = $db->get_brend_company('product');
                             while($fetch = mysqli_fetch_assoc($fetchs)){
-                                $get_brends_limit = $db->get_brends('product', ['company'=>$fetch['company']], 'ORDER BY id DESC LIMIT 3');
+                                $get_brends_limit = $db->get_brends('product', ['company'=>$fetch['company']], 'ORDER BY id DESC LIMIT 4');
                                 foreach($get_brends_limit as $key=>$brend){
                                     ?>
                                     <div class="col-lg-3 col-sm-6" id="t<?=$brend['id']?>">
@@ -49,10 +49,9 @@
                                                 <h5>🎨 <?=$brend['color']?></h5>
                                                 <h5>💾 <?=$brend['RAM']?> / <?=$brend['memory']?></h5>
                                                 <div>
-                                                    <button type="button" class="btn btn-warning " style="background-color: #03a5fc; margin: 6px 0; "><a href="cart-phone.php?id=<?=$brend['id']?>">Xarid qilish</a></button> 
-                                                    <button type="button" class="btn  btn-danger " style="background-color: #06bf6c; margin: 6px 0;" id='delete' ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
-                                                    <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708"/>
-                                                    </svg></i></button>
+                                                <button type="button" class="btn btn-lg btn-warning " style="background-color: #d9a630; margin: 6px; 0"><a style="text-decoration: none;color:white" href="phone-update.php?id=<?=$brend['id']?>">Update</a></button> 
+                                                    <button type="button" class="btn btn-lg btn-danger delete" style="background-color: #de221f; margin: 6px 0;"  phone_id='<?=$brend['id']?>' >Delete</button>
+                                                </button>
                                                 </div>
                                                 <div class="courses-meta">
                                                     <p class="author-name"><span>By</span> Xakimov Allamurod</p>
@@ -103,6 +102,54 @@
         <?php include_once '../includes/footer.php'?>
 
     </div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/sweetalert.min.js"></script>
+    <script type="text/javascript">
+        
+        $('.delete').click(function () {
+            let id = $(this).attr("phone_id");
+            swal({
+                title: "Ishonchingiz komilmi?",
+                text: "O'chirilgandan so'ng tiklab bo'lmaydi",
+                icon: "warning",
+                buttons:{
+                    cancel:"Yo'q!",
+                    confirm: {
+                        text: "Ha, roziman!",
+                        value: true,
+                    },
+                },
+            })
+            .then((willDelete)=>{
+                if (willDelete){
+                    $.ajax({
+                        url:"delete.php",
+                        type:"GET",
+                        data:{
+                            id:id,
+                        },
+                        success:function(data){
+                            let obj = jQuery.parseJSON(data);
+                            console.log(obj);
+                            if (obj.xatolik == 0){
+                                $('#t'+id).remove();
+                                swal("O'chirildi!", obj.xabar, "success");
+                                
+                            }
+                            else{
+                                swal("Xatolik!", obj.xabar, "error");
+                            }
+                        },
+                        error:function(xhr){
+                            alert("Kechirasiz, internetdan uzilish ro'y berdi. Iltimos tekshirib qaytadan urining");
+                        },
+                    });
+                }else{
+                    swal("Bekor qilindi!");
+                }
+            });
+        });
+    </script>
 
     <?php include_once '../includes/script.php'?>
 
